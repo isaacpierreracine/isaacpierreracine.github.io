@@ -1,0 +1,119 @@
+baseURL: "http://localhost:1313"
+theme: "hugo-theme-stack"
+defaultContentLanguage: "fr"
+defaultContentLanguageInSubdir: true
+
+params:
+  mainSections:
+    - art
+    - references
+  sidebar:
+    subtitle: "Art · Design · Films"
+  colorScheme:
+    toggle: true
+    default: auto
+  widgets:
+    homepage: []
+  article:
+    toc: true
+    readingTime: true
+  comments:
+    enabled: false
+    provider: giscus
+    giscus:
+      repo: isaacpierreracine/isaacpierreracine.github.io
+      repoID: R_kgDOSHGN5A
+      category: Announcements
+      categoryID: DIC_kwDOSHGN5M4C7Oit
+      mapping: pathname
+      strict: 0
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: bottom
+      lightTheme: light
+      darkTheme: dark_dimmed
+      lang: fr
+      loading: lazy
+
+languages:
+  fr:
+    languageName: "Français"
+    languageCode: "fr"
+    title: "Isaac Pierre Racine"
+    weight: 1
+    params:
+      sidebar:
+        subtitle: "Art · Design · Films"
+    menu:
+      main:
+        - name: Accueil
+          url: /fr/
+          weight: 1
+        - name: Art
+          url: /fr/art/
+          weight: 2
+        - name: Archive
+          url: /fr/archives/
+          weight: 3
+        - name: Références
+          url: /fr/references/
+          weight: 4
+        - name: À propos
+          url: /fr/about/
+          weight: 5
+
+  en:
+    languageName: "English"
+    languageCode: "en"
+    title: "Isaac Pierre Racine"
+    weight: 2
+    params:
+      sidebar:
+        subtitle: "Art · Design · Films"
+    menu:
+      main:
+        - name: Home
+          url: /en/
+          weight: 1
+        - name: Art
+          url: /en/art/
+          weight: 2
+        - name: Archive
+          url: /en/archives/
+          weight: 3
+        - name: References
+          url: /en/references/
+          weight: 4
+        - name: About
+          url: /en/about/
+          weight: 5
+
+  es:
+    languageName: "Español"
+    languageCode: "es"
+    title: "Isaac Pierre Racine"
+    weight: 3
+    params:
+      sidebar:
+        subtitle: "Art · Design · Films"
+    menu:
+      main:
+        - name: Inicio
+          url: /es/
+          weight: 1
+        - name: Arte
+          url: /es/art/
+          weight: 2
+        - name: Archivo
+          url: /es/archives/
+          weight: 3
+        - name: Referencias
+          url: /es/references/
+          weight: 4
+        - name: Acerca de
+          url: /es/about/
+          weight: 5
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,71 @@
+{{ define "main" }}
+<div class="references-section">
+    <div class="section-header">
+        <h1 class="section-title">{{ .Title }}</h1>
+    </div>
+    {{- $allTags := slice -}}
+    {{- range .Pages -}}
+        {{- range .Params.tags -}}
+            {{- $allTags = $allTags | append . -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $uniqueTags := $allTags | uniq | sort -}}
+    {{- if $uniqueTags }}
+    <div class="ref-tags" id="ref-tag-filter">
+        <button class="ref-tag active" data-tag="all">Tout</button>
+        {{- range $uniqueTags }}
+        <button class="ref-tag" data-tag="{{ . }}">{{ . }}</button>
+        {{- end }}
+    </div>
+    {{- end }}
+    <div class="ref-list" id="ref-list">
+        {{- range .Pages.ByDate.Reverse }}
+        <div class="ref-item" data-tags="{{ delimit .Params.tags "," }}">
+            <div class="ref-item-main">
+                {{- if .Params.url_externe }}
+                <a class="ref-title ref-title--link" href="{{ .Params.url_externe }}" target="_blank" rel="noopener">
+                    {{ .Title }}
+                    <svg class="ref-ext-icon" width="10" height="10" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 10L10 2M10 2H5M10 2V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                {{- else }}
+                <span class="ref-title">{{ .Title }}</span>
+                {{- end }}
+                {{- with .Params.note }}
+                <p class="ref-note">{{ . }}</p>
+                {{- end }}
+            </div>
+            <div class="ref-item-meta">
+                {{- range .Params.tags }}
+                <span class="ref-item-tag">{{ . }}</span>
+                {{- end }}
+                <time class="ref-date">{{ .Date | time.Format "Jan 2006" }}</time>
+            </div>
+        </div>
+        {{- end }}
+    </div>
+</div>
+<script>
+(function() {
+    const buttons = document.querySelectorAll('.ref-tag');
+    const items = document.querySelectorAll('.ref-item');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tag = btn.dataset.tag;
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            items.forEach(item => {
+                if (tag === 'all') {
+                    item.style.display = '';
+                } else {
+                    const tags = item.dataset.tags.split(',').map(t => t.trim());
+                    item.style.display = tags.includes(tag) ? '' : 'none';
+                }
+            });
+        });
+    });
+})();
+</script>
+{{- partialCached "footer/footer" . -}}
+{{ end }}

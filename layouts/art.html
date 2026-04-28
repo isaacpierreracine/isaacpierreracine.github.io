@@ -1,0 +1,55 @@
+{{ define "main" }}
+<div class="art-section">
+
+    <div class="section-header">
+        <h1 class="section-title">{{ .Title }}</h1>
+        {{- with .Content }}<div class="section-description">{{ . }}</div>{{- end }}
+    </div>
+
+    <div class="art-cards">
+        {{- range .Pages.ByWeight }}
+        {{- $isExternal := .Params.externalLink -}}
+        {{- $isSection := .IsSection -}}
+        <a class="art-card{{ if $isExternal }} art-card--external{{ end }}"
+           href="{{ if $isExternal }}{{ .Params.externalLink }}{{ else }}{{ .RelPermalink }}{{ end }}"
+           {{ if $isExternal }}target="_blank" rel="noopener"{{ end }}>
+
+            {{/* Card image */}}
+            {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+            <div class="art-card-image{{ if not $image }} art-card-image--empty{{ end }}">
+                {{- if $image }}
+                    <img src="{{ $image.Permalink }}" alt="{{ .Title }}" loading="lazy">
+                {{- end }}
+                {{- with .Params.status }}
+                <span class="art-card-badge">{{ . }}</span>
+                {{- end }}
+                {{- if $isSection }}
+                <span class="art-card-badge art-card-badge--section">En cours</span>
+                {{- end }}
+                {{- if $isExternal }}
+                <span class="art-card-external-icon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 10L10 2M10 2H5M10 2V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                {{- end }}
+            </div>
+
+            {{/* Card content */}}
+            <div class="art-card-body">
+                <h2 class="art-card-title">{{ .Title }}</h2>
+                {{- with .Params.description }}
+                <p class="art-card-description">{{ . }}</p>
+                {{- end }}
+                {{- if $isSection }}
+                <p class="art-card-count">{{ len .Pages }} entrée{{ if gt (len .Pages) 1 }}s{{ end }}</p>
+                {{- end }}
+            </div>
+
+        </a>
+        {{- end }}
+    </div>
+
+</div>
+{{- partialCached "footer/footer" . -}}
+{{ end }}

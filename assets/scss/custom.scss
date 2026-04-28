@@ -1,0 +1,752 @@
+// ============================================================
+// custom.scss — Isaac Pierre Racine
+// Injected via Stack's official custom.scss hook.
+// Adds top nav, hero, and overrides sidebar/footer styles.
+// ============================================================
+
+// ------------------------------------------------------------------
+// 1. Design tokens
+// ------------------------------------------------------------------
+:root {
+    --topnav-height:      52px;
+    --topnav-bg:          #222222;
+    --topnav-border:      #333333;
+    --topnav-text:        #e0e0e0;
+    --topnav-muted:       #888888;
+    --topnav-faint:       #555555;
+    --topnav-accent:      #4a9eff;
+    --topnav-raised:      #2a2a2a;
+    --topnav-avatar-bg:   #1a4a7a;
+    --topnav-avatar-fg:   #7ab8f5;
+}
+
+// ------------------------------------------------------------------
+// 2. Hide the left sidebar + hamburger entirely
+// ------------------------------------------------------------------
+.left-sidebar,
+.sidebar.left-sidebar,
+button#toggle-menu,
+.hamburger {
+    display: none !important;
+}
+
+// ------------------------------------------------------------------
+// 3. Fix Stack's main container — remove sidebar grid gap
+// ------------------------------------------------------------------
+.main-container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.main-container.topnav-layout {
+    display: block !important;
+
+    .main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+}
+
+// ------------------------------------------------------------------
+// 4. Top navigation bar
+// ------------------------------------------------------------------
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    height: var(--topnav-height);
+    background: var(--topnav-bg);
+    border-bottom: 1px solid var(--topnav-border);
+    width: 100%;
+}
+
+.topnav-inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+}
+
+// Brand
+.topnav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 24px;
+    border-right: 1px solid var(--topnav-border);
+    margin-right: 8px;
+    text-decoration: none !important;
+    color: var(--topnav-text) !important;
+    flex-shrink: 0;
+
+    &:hover .topnav-brand-name {
+        opacity: 0.8;
+    }
+}
+
+.topnav-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.topnav-avatar--initials {
+    background: var(--topnav-avatar-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--topnav-avatar-fg);
+    letter-spacing: 0.03em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.topnav-brand-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    white-space: nowrap;
+}
+
+// Nav items
+.topnav-menu {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    flex: 1;
+    // suppress any default ol/ul styling Stack might inject
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav-item {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 13px;
+    color: var(--topnav-muted);
+    text-decoration: none !important;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s;
+
+    &:hover {
+        color: var(--topnav-text);
+        text-decoration: none !important;
+    }
+
+    &.active {
+        color: var(--topnav-text);
+        border-bottom-color: var(--topnav-accent);
+    }
+}
+
+// Right controls — dark mode toggle restyled
+.topnav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-shrink: 0;
+    list-style: none;
+    padding: 0;
+    margin-right: 0;
+}
+
+li#dark-mode-toggle.topnav-toggle,
+.topnav-toggle {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--topnav-border) !important;
+    background: var(--topnav-raised) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    color: var(--topnav-muted) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+
+    span { display: none !important; } // hide "Dark mode" text label
+
+    svg {
+        width: 16px !important;
+        height: 16px !important;
+        stroke: var(--topnav-muted) !important;
+    }
+
+    &:hover svg {
+        stroke: var(--topnav-text) !important;
+    }
+}
+
+// ------------------------------------------------------------------
+// 5. Hero — homepage
+// ------------------------------------------------------------------
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px 40px;
+    gap: 14px;
+    width: 100%;
+}
+
+.hero-name {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    text-align: center;
+    letter-spacing: -0.01em;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.hero-tagline {
+    font-size: 13px;
+    color: var(--topnav-muted);
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--topnav-border);
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.hero-image--placeholder {
+    background: var(--topnav-raised);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-placeholder-text {
+    font-size: 13px;
+    color: var(--topnav-faint);
+}
+
+.hero-placeholder-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    font-size: 11px;
+    color: var(--topnav-faint);
+    border: 1px solid var(--topnav-border);
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: var(--topnav-bg);
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    font-size: 11px;
+    color: #ccc;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+// ------------------------------------------------------------------
+// 6. Footer — restyle Stack's built-in footer to match mockup
+// ------------------------------------------------------------------
+.site-footer {
+    border-top: 1px solid var(--topnav-border) !important;
+    background: var(--topnav-bg) !important;
+    padding: 12px 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+
+    section {
+        font-size: 11px !important;
+        color: var(--topnav-faint) !important;
+        margin: 0 !important;
+    }
+
+    .powerby {
+        text-align: right;
+        a { color: var(--topnav-faint) !important; }
+    }
+}
+
+// ------------------------------------------------------------------
+// 7. Mobile
+// ------------------------------------------------------------------
+@media (max-width: 640px) {
+    .topnav-brand-name {
+        display: none;
+    }
+
+    .topnav-inner {
+        padding: 0 12px;
+    }
+
+    .topnav-item {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 32px 16px 24px;
+    }
+}
+
+// ------------------------------------------------------------------
+// 8. Section header (shared: Art, Références)
+// ------------------------------------------------------------------
+.section-header {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid var(--topnav-border);
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    margin: 0 0 6px;
+    border: none;
+    padding: 0;
+}
+
+.section-description {
+    font-size: 13px;
+    color: var(--topnav-muted);
+    margin: 0;
+}
+
+// ------------------------------------------------------------------
+// 9. Art section — project cards
+// ------------------------------------------------------------------
+.art-section {
+    padding: 0 0 48px;
+}
+
+.art-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.art-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--topnav-border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--topnav-raised);
+    text-decoration: none !important;
+    transition: border-color 0.15s, transform 0.15s;
+
+    &:hover {
+        border-color: #555;
+        transform: translateY(-2px);
+    }
+}
+
+.art-card-image {
+    aspect-ratio: 16 / 9;
+    background: #222;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.art-card-image--empty {
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--topnav-border);
+        border-radius: 50%;
+    }
+}
+
+.art-card-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.art-card-external-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--topnav-muted);
+}
+
+.art-card-body {
+    padding: 16px;
+    flex: 1;
+}
+
+.art-card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    margin: 0 0 6px;
+    border: none;
+    padding: 0;
+}
+
+.art-card-description {
+    font-size: 12px;
+    color: var(--topnav-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+// ------------------------------------------------------------------
+// 10. References section
+// ------------------------------------------------------------------
+.references-section {
+    padding: 0 0 48px;
+}
+
+// Tag filter bar
+.ref-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.ref-tag {
+    font-size: 12px;
+    color: var(--topnav-muted);
+    background: var(--topnav-raised);
+    border: 1px solid var(--topnav-border);
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+
+    &:hover {
+        color: var(--topnav-text);
+        border-color: #555;
+    }
+
+    &.active {
+        color: var(--topnav-text);
+        border-color: var(--topnav-accent);
+        background: rgba(74, 158, 255, 0.08);
+    }
+}
+
+// Reference list
+.ref-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.ref-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--topnav-border);
+
+    &:first-child {
+        border-top: 1px solid var(--topnav-border);
+    }
+}
+
+.ref-item-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.ref-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    display: inline;
+}
+
+.ref-title--link {
+    text-decoration: none !important;
+    color: var(--topnav-text) !important;
+
+    &:hover {
+        color: var(--topnav-accent) !important;
+    }
+}
+
+.ref-ext-icon {
+    display: inline;
+    margin-left: 4px;
+    vertical-align: middle;
+    color: var(--topnav-muted);
+}
+
+.ref-note {
+    font-size: 13px;
+    color: var(--topnav-muted);
+    margin: 6px 0 0;
+    line-height: 1.6;
+}
+
+.ref-item-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.ref-item-tag {
+    font-size: 10px;
+    color: var(--topnav-faint);
+    border: 1px solid var(--topnav-border);
+    border-radius: 4px;
+    padding: 2px 7px;
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+
+.ref-date {
+    font-size: 11px;
+    color: var(--topnav-faint);
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    .ref-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ref-item-meta {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .art-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+// ------------------------------------------------------------------
+// 11. Art card — section badge + entry count
+// ------------------------------------------------------------------
+.art-card-badge--section {
+    background: rgba(74, 158, 255, 0.15);
+    border-color: rgba(74, 158, 255, 0.3);
+    color: var(--topnav-accent);
+}
+
+.art-card-count {
+    font-size: 11px;
+    color: var(--topnav-faint);
+    margin: 6px 0 0;
+}
+
+// ------------------------------------------------------------------
+// 12. Autour du Moulin — entry list
+// ------------------------------------------------------------------
+.adm-section {
+    padding: 0 0 48px;
+}
+
+.section-back {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--topnav-muted);
+    text-decoration: none !important;
+    margin-bottom: 12px;
+    transition: color 0.15s;
+
+    &:hover {
+        color: var(--topnav-text);
+    }
+}
+
+.adm-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.adm-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--topnav-border);
+    text-decoration: none !important;
+    transition: background 0.1s;
+
+    &:first-child {
+        border-top: 1px solid var(--topnav-border);
+    }
+
+    &:hover .adm-entry-title {
+        color: var(--topnav-accent);
+    }
+}
+
+.adm-entry-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.adm-entry-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    transition: color 0.15s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.adm-entry-date {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--topnav-muted);
+}
+
+.adm-entry-thumb {
+    width: 72px;
+    height: 48px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid var(--topnav-border);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.adm-entry-thumb--empty {
+    background: var(--topnav-raised);
+}
+
+@media (max-width: 640px) {
+    .adm-entry-thumb {
+        width: 56px;
+        height: 38px;
+    }
+}
+
+// ------------------------------------------------------------------
+// 13. Hide Stack's JS-injected UI elements we don't need
+// ------------------------------------------------------------------
+
+// Scroll-to-top arrow button (injected by main.ts)
+#back-to-top,
+.back-to-top,
+button.back-to-top {
+    display: none !important;
+}
+
+// Color scheme toggle button injected by Stack's JS into the DOM
+// (appears as "C ..." in top right when sidebar is hidden)
+#dark-mode-toggle:not(.topnav-toggle),
+.sidebar #dark-mode-toggle,
+body > #dark-mode-toggle {
+    display: none !important;
+}
+
+// Stack sometimes renders a floating theme switcher widget
+#color-scheme-toggle,
+.color-scheme-toggle:not(.topnav-toggle) {
+    display: none !important;
+}
+
+// ------------------------------------------------------------------
+// 14. Language switcher
+// ------------------------------------------------------------------
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-right: 4px;
+}
+
+.lang-btn {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--topnav-muted);
+    text-decoration: none !important;
+    padding: 4px 7px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+
+    &:hover {
+        color: var(--topnav-text);
+        border-color: var(--topnav-border);
+    }
+
+    &.active {
+        color: var(--topnav-text);
+        border-color: var(--topnav-border);
+        background: var(--topnav-raised);
+    }
+}

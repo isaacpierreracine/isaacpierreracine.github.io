@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="hero">
+
+    <h1 class="hero-name">{{ .Site.Title }}</h1>
+
+    {{- with .Site.Params.sidebar.subtitle }}
+    <p class="hero-tagline">{{ . }}</p>
+    {{- end }}
+
+    {{- with .Site.Params.hero.image }}
+    <div class="hero-image">
+        <img src="{{ . | relURL }}"
+             alt="{{ $.Site.Params.hero.alt | default $.Site.Title }}"
+             loading="eager">
+        {{- with $.Site.Params.hero.caption }}
+        <span class="hero-caption">{{ . }}</span>
+        {{- end }}
+    </div>
+    {{- else }}
+    <div class="hero-image hero-image--placeholder">
+        <span class="hero-placeholder-text">votre image ici</span>
+        <span class="hero-placeholder-hint">une image · votre choix</span>
+    </div>
+    {{- end }}
+
+</div>
+{{- partial "footer/footer.html" . -}}
+{{ end }}

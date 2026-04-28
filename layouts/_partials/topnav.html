@@ -1,0 +1,62 @@
+<header class="topnav">
+    <div class="topnav-inner">
+
+        {{/* Brand */}}
+        <a class="topnav-brand" href="{{ .Site.Home.RelPermalink }}">
+            {{- with .Site.Params.sidebar.avatar -}}
+                {{- $avatar := partial "helper/image" (dict "Image" . "Resources" resources "Context" $) -}}
+                <img class="topnav-avatar" src="{{ $avatar.Permalink }}"
+                    width="32" height="32" alt="{{ $.Site.Title }}" loading="eager">
+            {{- else -}}
+                <div class="topnav-avatar topnav-avatar--initials" aria-hidden="true">
+                    {{- $parts := split .Site.Title " " -}}
+                    {{- if ge (len $parts) 2 -}}
+                        {{- index $parts 0 | upper | truncate 1 "" -}}{{- index $parts 1 | upper | truncate 1 "" -}}
+                    {{- else -}}
+                        {{- .Site.Title | upper | truncate 2 "" -}}
+                    {{- end -}}
+                </div>
+            {{- end }}
+            <span class="topnav-brand-name">{{ .Site.Title }}</span>
+        </a>
+
+        {{/* Nav items */}}
+        <nav class="topnav-menu" aria-label="Navigation principale">
+            {{- $currentPage := . -}}
+            {{- range .Site.Menus.main -}}
+                {{- $active := or (eq $currentPage.RelPermalink .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) -}}
+                <a class="topnav-item{{ if $active }} active{{ end }}"
+                   href="{{ .URL }}">{{ .Name }}</a>
+            {{- end }}
+        </nav>
+
+        {{/* Right controls */}}
+        <div class="topnav-right">
+
+            {{/* Language switcher */}}
+            {{- if hugo.IsMultilingual }}
+            <div class="lang-switcher">
+                {{- $currentLang := .Site.Language.Lang -}}
+                {{- range .Site.Languages }}
+                <a class="lang-btn{{ if eq .Lang $currentLang }} active{{ end }}"
+                   href="/{{ .Lang }}/"
+                   lang="{{ .Lang }}"
+                   title="{{ .LanguageName }}">
+                    {{ .Lang | upper }}
+                </a>
+                {{- end }}
+            </div>
+            {{- end }}
+
+            {{/* Dark mode toggle */}}
+            {{- if .Site.Params.colorScheme.toggle }}
+            <li id="dark-mode-toggle" class="topnav-toggle">
+                {{ partial "helper/icon" "toggle-left" }}
+                {{ partial "helper/icon" "toggle-right" }}
+            </li>
+            {{- end }}
+
+        </div>
+
+    </div>
+</header>

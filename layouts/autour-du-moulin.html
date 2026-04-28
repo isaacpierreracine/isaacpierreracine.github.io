@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="adm-section">
+
+    <div class="section-header">
+        <a class="section-back" href="{{ .Parent.RelPermalink }}">← Art</a>
+        <h1 class="section-title">{{ .Title }}</h1>
+        {{- with .Params.description }}
+        <p class="section-description">{{ . }}</p>
+        {{- end }}
+    </div>
+
+    <div class="adm-list">
+        {{- range .Pages.ByDate.Reverse }}
+        <a class="adm-entry" href="{{ .RelPermalink }}">
+
+            <div class="adm-entry-text">
+                <span class="adm-entry-title">{{ .Title }}</span>
+                <time class="adm-entry-date">{{ .Date | time.Format "2 January 2006" }}</time>
+            </div>
+
+            {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+            {{- if $image }}
+            <div class="adm-entry-thumb">
+                <img src="{{ $image.Permalink }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+            {{- else }}
+            <div class="adm-entry-thumb adm-entry-thumb--empty"></div>
+            {{- end }}
+
+        </a>
+        {{- end }}
+    </div>
+
+</div>
+{{- partialCached "footer/footer" . -}}
+{{ end }}
