@@ -35,12 +35,19 @@ params:
       lang: fr
       loading: lazy
 
+outputs:
+  home:
+    - html
+    - rss
+    - json
+
 languages:
   fr:
     languageName: "Français"
     languageCode: "fr"
     title: "Isaac Pierre Racine"
     weight: 1
+    contentDir: "content/fr"
     params:
       sidebar:
         subtitle: "Art · Design · Films"
@@ -67,6 +74,7 @@ languages:
     languageCode: "en"
     title: "Isaac Pierre Racine"
     weight: 2
+    contentDir: "content/en"
     params:
       sidebar:
         subtitle: "Art · Design · Films"
@@ -93,6 +101,7 @@ languages:
     languageCode: "es"
     title: "Isaac Pierre Racine"
     weight: 3
+    contentDir: "content/es"
     params:
       sidebar:
         subtitle: "Art · Design · Films"
@@ -113,7 +122,3 @@ languages:
         - name: Acerca de
           url: /es/about/
           weight: 5
-markup:
-  goldmark:
-    renderer:
-      unsafe: true

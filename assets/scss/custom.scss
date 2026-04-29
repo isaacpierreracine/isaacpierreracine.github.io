@@ -750,3 +750,30 @@ body > #dark-mode-toggle {
         background: var(--topnav-raised);
     }
 }
+// ------------------------------------------------------------------
+// 15. Search button
+// ------------------------------------------------------------------
+.search-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--topnav-border);
+    background: var(--topnav-raised);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--topnav-muted);
+    text-decoration: none !important;
+    flex-shrink: 0;
+    transition: color 0.15s, border-color 0.15s;
+
+    &:hover {
+        color: var(--topnav-text);
+        border-color: #555;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
