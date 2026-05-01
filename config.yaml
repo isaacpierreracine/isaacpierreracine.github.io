@@ -16,7 +16,7 @@ params:
     homepage: []
   article:
     toc: true
-    readingTime: true
+    readingTime: false
   comments:
     enabled: false
     provider: giscus
@@ -34,6 +34,9 @@ params:
       darkTheme: dark_dimmed
       lang: fr
       loading: lazy
+  hero:
+    image: hero.jpg
+    alt: "Isaac Pierre Racine"
 
 outputs:
   home:
@@ -62,7 +65,7 @@ languages:
         - name: Archive
           url: /fr/archives/
           weight: 3
-        - name: Références
+        - name: Liens utiles
           url: /fr/references/
           weight: 4
         - name: À propos
@@ -89,7 +92,7 @@ languages:
         - name: Archive
           url: /en/archives/
           weight: 3
-        - name: References
+        - name: Useful links
           url: /en/references/
           weight: 4
         - name: About
@@ -116,7 +119,7 @@ languages:
         - name: Archivo
           url: /es/archives/
           weight: 3
-        - name: Referencias
+        - name: Enlaces utiles
           url: /es/references/
           weight: 4
         - name: Acerca de

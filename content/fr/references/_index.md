@@ -1,4 +1,4 @@
 ---
-title: "Références"
+title: "Liens utiles"
 layout: "references"
 ---

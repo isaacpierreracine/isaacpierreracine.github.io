@@ -1,7 +1,6 @@
 // ============================================================
 // custom.scss — Isaac Pierre Racine
 // Injected via Stack's official custom.scss hook.
-// Adds top nav, hero, and overrides sidebar/footer styles.
 // ============================================================
 
 // ------------------------------------------------------------------
@@ -68,7 +67,6 @@ button#toggle-menu,
     padding: 0 24px;
 }
 
-// Brand
 .topnav-brand {
     display: flex;
     align-items: center;
@@ -112,13 +110,11 @@ button#toggle-menu,
     white-space: nowrap;
 }
 
-// Nav items
 .topnav-menu {
     display: flex;
     align-items: stretch;
     height: 100%;
     flex: 1;
-    // suppress any default ol/ul styling Stack might inject
     list-style: none;
     margin: 0;
     padding: 0;
@@ -146,7 +142,6 @@ button#toggle-menu,
     }
 }
 
-// Right controls — dark mode toggle restyled
 .topnav-right {
     display: flex;
     align-items: center;
@@ -174,7 +169,7 @@ li#dark-mode-toggle.topnav-toggle,
     margin: 0 !important;
     list-style: none !important;
 
-    span { display: none !important; } // hide "Dark mode" text label
+    span { display: none !important; }
 
     svg {
         width: 16px !important;
@@ -272,7 +267,7 @@ li#dark-mode-toggle.topnav-toggle,
 }
 
 // ------------------------------------------------------------------
-// 6. Footer — restyle Stack's built-in footer to match mockup
+// 6. Footer
 // ------------------------------------------------------------------
 .site-footer {
     border-top: 1px solid var(--topnav-border) !important;
@@ -314,6 +309,25 @@ li#dark-mode-toggle.topnav-toggle,
 
     .hero {
         padding: 32px 16px 24px;
+    }
+
+    .ref-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ref-item-meta {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .art-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .adm-entry-thumb {
+        width: 56px;
+        height: 38px;
     }
 }
 
@@ -415,6 +429,27 @@ li#dark-mode-toggle.topnav-toggle,
     text-transform: uppercase;
 }
 
+.art-card-badge--section {
+    background: transparent;
+    border-color: var(--topnav-border);
+    color: var(--topnav-muted);
+}
+
+.art-card-badge--below {
+    position: static;
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--topnav-text);
+    background: transparent;
+    border: 1px solid var(--topnav-border);
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
 .art-card-external-icon {
     position: absolute;
     top: 10px;
@@ -451,6 +486,12 @@ li#dark-mode-toggle.topnav-toggle,
     line-height: 1.6;
 }
 
+.art-card-count {
+    font-size: 11px;
+    color: var(--topnav-faint);
+    margin: 6px 0 0;
+}
+
 // ------------------------------------------------------------------
 // 10. References section
 // ------------------------------------------------------------------
@@ -458,7 +499,6 @@ li#dark-mode-toggle.topnav-toggle,
     padding: 0 0 48px;
 }
 
-// Tag filter bar
 .ref-tags {
     display: flex;
     flex-wrap: wrap;
@@ -488,7 +528,6 @@ li#dark-mode-toggle.topnav-toggle,
     }
 }
 
-// Reference list
 .ref-list {
     display: flex;
     flex-direction: column;
@@ -567,39 +606,8 @@ li#dark-mode-toggle.topnav-toggle,
     white-space: nowrap;
 }
 
-@media (max-width: 640px) {
-    .ref-item {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .ref-item-meta {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .art-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
 // ------------------------------------------------------------------
-// 11. Art card — section badge + entry count
-// ------------------------------------------------------------------
-.art-card-badge--section {
-    background: rgba(74, 158, 255, 0.15);
-    border-color: rgba(74, 158, 255, 0.3);
-    color: var(--topnav-accent);
-}
-
-.art-card-count {
-    font-size: 11px;
-    color: var(--topnav-faint);
-    margin: 6px 0 0;
-}
-
-// ------------------------------------------------------------------
-// 12. Autour du Moulin — entry list
+// 11. Autour du Moulin — entry list
 // ------------------------------------------------------------------
 .adm-section {
     padding: 0 0 48px;
@@ -686,40 +694,32 @@ li#dark-mode-toggle.topnav-toggle,
     background: var(--topnav-raised);
 }
 
-@media (max-width: 640px) {
-    .adm-entry-thumb {
-        width: 56px;
-        height: 38px;
-    }
-}
-
 // ------------------------------------------------------------------
-// 13. Hide Stack's JS-injected UI elements we don't need
+// 12. Hide Stack's JS-injected UI elements
 // ------------------------------------------------------------------
-
-// Scroll-to-top arrow button (injected by main.ts)
 #back-to-top,
 .back-to-top,
 button.back-to-top {
     display: none !important;
 }
 
-// Color scheme toggle button injected by Stack's JS into the DOM
-// (appears as "C ..." in top right when sidebar is hidden)
 #dark-mode-toggle:not(.topnav-toggle),
 .sidebar #dark-mode-toggle,
 body > #dark-mode-toggle {
     display: none !important;
 }
 
-// Stack sometimes renders a floating theme switcher widget
 #color-scheme-toggle,
 .color-scheme-toggle:not(.topnav-toggle) {
     display: none !important;
 }
 
+.icon-tabler-language {
+    display: none !important;
+}
+
 // ------------------------------------------------------------------
-// 14. Language switcher
+// 13. Language switcher
 // ------------------------------------------------------------------
 .lang-switcher {
     display: flex;
@@ -750,8 +750,9 @@ body > #dark-mode-toggle {
         background: var(--topnav-raised);
     }
 }
+
 // ------------------------------------------------------------------
-// 15. Search button
+// 14. Search button
 // ------------------------------------------------------------------
 .search-btn {
     width: 34px;
@@ -776,4 +777,37 @@ body > #dark-mode-toggle {
         width: 16px;
         height: 16px;
     }
+}
+
+// ------------------------------------------------------------------
+// 15. Article body — tighter spacing
+// ------------------------------------------------------------------
+.article-content {
+    line-height: 1.4;
+
+    p {
+        margin-bottom: 0.5em;
+    }
+
+    ul, ol {
+        line-height: 1.4;
+    }
+
+    li {
+        margin-bottom: 0.1em;
+    }
+
+    h3 + ul, h3 + ol,
+    h4 + ul, h4 + ol,
+    p + ul, p + ol {
+        margin-top: 0 !important;
+    }
+
+    h3, h4 {
+        margin-bottom: 0.2em;
+    }
+}
+.art-card-badge--section {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
 }
