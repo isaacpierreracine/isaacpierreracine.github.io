@@ -1,8 +1,10 @@
 ---
 title: "Recherche"
+slug: "search"
 layout: "search"
+type: "page"
 outputs:
-  - html
-  - json
+    - html
+    - json
 draft: false
 ---

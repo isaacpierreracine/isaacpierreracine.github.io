@@ -1,4 +1,4 @@
-baseURL: "http://localhost:1313"
+baseURL: "https://isaacpierreracine.github.io"
 theme: "hugo-theme-stack"
 defaultContentLanguage: "fr"
 defaultContentLanguageInSubdir: true
@@ -42,6 +42,12 @@ outputs:
   home:
     - html
     - rss
+    - json
+  section:
+    - html
+    - rss
+  page:
+    - html
     - json
 
 languages:
