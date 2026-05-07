@@ -8,7 +8,7 @@ Para la realización de este proyecto, la ciudad de St-Pascal me ofrece acceso a
 
 ![Edificio de la estación](image04.jpg)
 
-La estación es accesible por la puerta principal, que abre a un pequeño vestíbulo que da acceso al taller y al segundo piso, alquilado por una escuela de música que no parece muy activa por el momento. La parte trasera da directamente a la vía del tren. Se instaló una valla de tipo malla cuando la empresa ferroviaria abandonó el servicio de pasajeros, para restringir el acceso a las vías.
+La estación es accesible por la puerta principal, que abre a un pequeño vestíbulo que da acceso al taller y al segundo piso, alquilado por una escuela de música que no parece muy activa por el momento. La parte trasera da directamente a la vía del tren. Se instaló una valla de tipo malla cuando la empresa ferroviaria abandonó el servicio de pasajeros, para restringir el acceso a las vías. Se accede también al estudio por la parte trasera de la estación. Prefiero que se use esa entrada para acceder al taller en lugar de por la entrada principal. Lo hace más íntimo y más difícil de encontrar. Y eso me gusta.
 
 ![Parte trasera del edificio](image05.1.jpg)
 

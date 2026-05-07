@@ -8,7 +8,7 @@ For this project, the city of St-Pascal has given me access to the ground floor 
 
 ![Station Building](image04.jpg)
 
-The station is accessible through the main entrance, which opens onto a small lobby leading to the studio and to the second floor, rented by a music school that doesn't seem very active at the moment. The back of the building opens directly onto the railway tracks. A chain-link fence was installed when the train company discontinued passenger service, to restrict access to the tracks. There are 2 other entrances through a narrow corridor between the back of the building and the fence at each end of the station. I actually prefer to use those instead of the main entrance. It makes it more intmate and a bit more difficult to find which I like.  
+The station is accessible through the main entrance, which opens onto a small lobby leading to the studio and to the second floor, rented by a music school that doesn't seem very active at the moment. The back of the building opens directly onto the railway tracks. A chain-link fence was installed when the train company discontinued passenger service, to restrict access to the tracks. There are 2 other entrances through a narrow corridor between the back of the building and the fence at each end of the station. I actually prefer to use those instead of the main entrance. It makes it more intimate and feels more natural.  
 
 ![Back of the building](image05.1.jpg)
 
