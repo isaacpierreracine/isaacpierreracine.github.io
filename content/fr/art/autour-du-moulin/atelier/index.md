@@ -7,13 +7,14 @@ draft: false
 Pour la réalisation de ce projet la ville de St-Pascal m'offre accès au rez-de chaussé de la vieille gsre pour y installer mon atelier. L'extérieur de l'édifice respecte son architecture originale bien que un peu défraîchi mais ça lui donne un charme particulier très approprié pour le projet. Comme si cet édifice un peu délaissé qui vît dans le quartier comme le fantôme d'un passé déchû qui revient à la vie. 
 ![Édifice de la Gare ](image04.jpg)
 
-La gare est accessible par la porte principale qui ouvre sur un petit hall donnant accès à l'atelier et au deuxième étage qui est loué par une école de musique mais qui semble pas très active pour le moment. La partie arrière donne directement sur la voie de chemn de fer. Une clôture de type frost a été installé lorsque la compagnie de train a abandonné le service de passager pour restreindre l'accès à la voie ferré.
+La gare est accessible par la porte principale qui ouvre sur un petit hall donnant accès à l'atelier et au deuxième étage qui est loué par une école de musique mais qui semble pas très active pour le moment. La partie arrière donne directement sur la voie de chemin de fer. Une clôture de type frost a été installé lorsque la compagnie de train a abandonné le service de passager pour restreindre l'accès à la voie ferré. Il y a deux autres portes donnant accès â l'atelier â l'arrière de l'édifice. Elles sont situés sous le préeau et me semble bien adéquate piur qu'elles deviennet la porte d'entré officielle du studio. Ça fait plus intime et me semble plus naturel. 
+
 ![Arrière de l'édifice ](image05.1.jpg)
 
 L'intérieur a été rénové récemmment, avec les meilleures intentions mais faisant en sorte que le cachet original a été remplacé par les critères de notre époque; c'est-à-dire avec le souci de tout standardiser. 
 ![Intérieur à mon arrivée ](image05.jpg)
 
-Ceci dit le lieu est neutre, fonctionnel et il est  facile à investir. L'espace dont je dispose est assez grand pour que je puisse créer les différents espaces de travail dont j'aurai besoin.
+Ceci dit le lieu est neutre, fonctionnel et il est facile à investir. L'espace dont je dispose est assez grand pour que je puisse créer les différents espaces de travail dont j'aurai besoin.
 
 
 ![Aménagement de l'espace ](image06.jpg)

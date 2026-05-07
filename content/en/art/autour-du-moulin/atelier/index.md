@@ -4,11 +4,11 @@ date: 2026-05-06
 draft: false
 ---
 
-For this project, the city of St-Pascal has given me access to the ground floor of the old train station to set up my studio. The exterior of the building preserves its original architecture, though a little worn — which gives it a particular charm that feels very fitting for the project. As if this slightly neglected building, living in the neighbourhood like the ghost of a fallen past, is coming back to life.
+For this project, the city of St-Pascal has given me access to the ground floor of the old train station to set up my studio. The exterior of the building preserves its original architecture, though a little worn — which gives it a particular charm that is perfect for an art project. As if this slightly neglected building, living in the neighbourhood like the ghost of a fallen past, is coming back to life.
 
 ![Station Building](image04.jpg)
 
-The station is accessible through the main entrance, which opens onto a small lobby leading to the studio and to the second floor, rented by a music school that doesn't seem very active at the moment. The back of the building opens directly onto the railway tracks. A chain-link fence was installed when the train company discontinued passenger service, to restrict access to the tracks.
+The station is accessible through the main entrance, which opens onto a small lobby leading to the studio and to the second floor, rented by a music school that doesn't seem very active at the moment. The back of the building opens directly onto the railway tracks. A chain-link fence was installed when the train company discontinued passenger service, to restrict access to the tracks. There are 2 other entrances through a narrow corridor between the back of the building and the fence at each end of the station. I actually prefer to use those instead of the main entrance. It makes it more intmate and a bit more difficult to find which I like.  
 
 ![Back of the building](image05.1.jpg)
 

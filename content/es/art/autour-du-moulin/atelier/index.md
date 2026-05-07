@@ -34,6 +34,6 @@ He instalado distintas estaciones de trabajo para responder a los diferentes cam
 
 ![Espacio chill/exposición](image16.jpg)
 
-Ahora puedo empezar a trabajar y he decidido que mi primer proyecto de exploración cinética va ser sobre la manifestación de la energía de este magnifico tren. Se percibe a través él sonido y la vibración del suelo a su paso, y me propongo visualizarla mediante el movimiento de la materia y el viento que genera. (ver proximo artículo: La energía del tren)
+Ahora puedo empezar a trabajar y he decidido que mi primer proyecto de exploración cinética va ser sobre la manifestación de la energía de este magnifico tren. Se percibe a través él sonido y la vibración del suelo a su paso, y me propongo visualizarla mediante el viento que genera y como se puede traducir en movimiento de la materia. (ver proximo artículo: La energía del tren)
 
 ![Esperando el próximo tren](image19.jpg)
