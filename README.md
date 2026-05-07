@@ -125,6 +125,7 @@ params:
     readingTime: false
   comments:
     enabled: false                              # Giscus configured but off
+  # sidebar subtitle removed — no tagline on homepage
 
 outputs:
   home:
