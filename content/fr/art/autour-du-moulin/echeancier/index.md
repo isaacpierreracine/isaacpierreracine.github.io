@@ -7,7 +7,8 @@ draft: false
 
 | 2026 | Activité |
 | :--- | :--- |
-| 14-04 – 20-04 | • Création et programmation de la page web static _(insérer lien)_. |
+| 14-03 – 10-04 | • recherche, inspiration et conceptualisation |
+| 11-04 – 20-04 | • Création et programmation de la page web static _[Autour du Moulin](https://isaacpierreracine.github.io/fr/art/autour-du-moulin/)_ |
 | 20-04 - 26-04 | • Prise de contact et réunion avec partenaires (Ville St-Pascal, Fablabs RDL + La Pocatière) |
 | 27-04 | • Début recherche des matériaux |
 | 27-04 | • Publication de l'offre de stage |
@@ -16,7 +17,7 @@ draft: false
 | 07-05 - 20-05 | • __Réunion comité Ville St-Pascal (date TBD)__ |
 | 07-05 - 12-05 | • entrevue des candidats stagiaires |
 | 07-05 - 20-05 | • Esquisses des artefacts |
-| 21-06 - 22-06 | • Études et visite terrain réel |
+| 21-05 - 22-05 | • Études et visite terrain réel |
 | 23-05 - 02-06 | • test et expérimentation avec 2 sources d'énergie |
 | 03-06 - 15-06 | • recherche effets cinétiques |
 | 15-06 - 20-06 | • esquisses des principes d'ingéniérie - collaboration stagiaire |
