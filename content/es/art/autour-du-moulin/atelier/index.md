@@ -2,6 +2,7 @@
 title: "Taller"
 date: 2026-05-06
 draft: false
+image: image11.jpg
 ---
 
 Para la realización de este proyecto, la ciudad de St-Pascal me ofrece acceso a la planta baja de la antigua estación de tren para instalar mi taller. El exterior del edificio conserva su arquitectura original, aunque un poco deteriorada — lo que le da un encanto particular muy apropiado para el proyecto. Como si este edificio algo abandonado, que vive en el barrio como el fantasma de un pasado caído, volviera a la vida.

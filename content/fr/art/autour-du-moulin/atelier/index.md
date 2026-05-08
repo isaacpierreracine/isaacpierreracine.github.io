@@ -2,6 +2,7 @@
 title: "Atelier"
 date: 2026-05-06
 draft: false
+image: image11.jpg
 ---
 
 Pour la réalisation de ce projet la ville de St-Pascal m'offre accès au rez-de chaussé de la vieille gsre pour y installer mon atelier. L'extérieur de l'édifice respecte son architecture originale bien que un peu défraîchi mais ça lui donne un charme particulier très approprié pour le projet. Comme si cet édifice un peu délaissé qui vît dans le quartier comme le fantôme d'un passé déchû qui revient à la vie. 

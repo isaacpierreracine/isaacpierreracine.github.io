@@ -2,6 +2,7 @@
 title: "Studio"
 date: 2026-05-06
 draft: false
+image: image11.jpg
 ---
 
 For this project, the city of St-Pascal has given me access to the ground floor of the old train station to set up my studio. The exterior of the building preserves its original architecture, though a little worn — which gives it a particular charm that is perfect for an art project. As if this slightly neglected building, living in the neighbourhood like the ghost of a fallen past, is coming back to life.
