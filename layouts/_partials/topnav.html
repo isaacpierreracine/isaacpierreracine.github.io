@@ -1,6 +1,13 @@
 <header class="topnav">
     <div class="topnav-inner">
 
+        {{/* Back button — shown on all pages except homepage */}}
+        <a class="topnav-back" id="topnav-back" href="#" aria-label="Retour" style="display:none">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
         {{/* Brand */}}
         <a class="topnav-brand" href="{{ .Site.Home.RelPermalink }}">
             {{- with .Site.Params.sidebar.avatar -}}
@@ -30,31 +37,32 @@
             {{- end }}
         </nav>
 
-            {{/* Language switcher */}}
-            {{- if hugo.IsMultilingual }}
-            <div class="lang-switcher">
-                {{- $currentLang := .Site.Language.Lang -}}
-                {{- range .Site.Languages }}
-                <a class="lang-btn{{ if eq .Lang $currentLang }} active{{ end }}"
-                   href="/{{ .Lang }}/"
-                   lang="{{ .Lang }}"
-                   title="{{ .LanguageName }}">
-                    {{ .Lang | upper }}
-                </a>
-                {{- end }}
-            </div>
+        {{/* Language switcher */}}
+        {{- if hugo.IsMultilingual }}
+        <div class="lang-switcher">
+            {{- $currentLang := .Site.Language.Lang -}}
+            {{- range .Site.Languages }}
+            <a class="lang-btn{{ if eq .Lang $currentLang }} active{{ end }}"
+               href="/{{ .Lang }}/"
+               lang="{{ .Lang }}"
+               title="{{ .LanguageName }}">
+                {{ .Lang | upper }}
+            </a>
             {{- end }}
+        </div>
+        {{- end }}
 
-            {{/* Right controls */}}
-            <div class="topnav-right">
+        {{/* Right controls */}}
+        <div class="topnav-right">
 
-            {{/* Search button — links to search page for current language */}}
+            {{/* Search button */}}
             <a class="search-btn" href="/{{ .Site.Language.Lang }}/search/" aria-label="{{ T `search.title` }}">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                     <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.4"/>
                     <line x1="10.2" y1="10.2" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
                 </svg>
             </a>
+
             {{/* Dark mode toggle */}}
             {{- if .Site.Params.colorScheme.toggle }}
             <li id="dark-mode-toggle" class="topnav-toggle">
@@ -67,3 +75,28 @@
 
     </div>
 </header>
+
+<script>
+(function() {
+    var homePatterns = [
+        /^\/fr\/?$/, /^\/en\/?$/, /^\/es\/?$/
+    ];
+    var path = window.location.pathname;
+    var isHome = homePatterns.some(function(p) { return p.test(path); });
+    if (!isHome) {
+        var btn = document.getElementById('topnav-back');
+        if (btn) {
+            btn.style.display = 'flex';
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    var lang = path.split('/')[1] || 'fr';
+                    window.location.href = '/' + lang + '/';
+                }
+            });
+        }
+    }
+})();
+</script>

@@ -131,3 +131,8 @@ languages:
         - name: Acerca de
           url: /es/about/
           weight: 5
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

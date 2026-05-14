@@ -1,6 +1,6 @@
 # isaacpierreracine.github.io — Site Construction Reference
 
-Last updated: May 7, 2026
+Last updated: May 14, 2026
 
 ---
 
@@ -40,7 +40,7 @@ Last updated: May 7, 2026
 ├── assets/scss/
 │   └── custom.scss                       ← ALL custom styles (Stack's official hook)
 ├── layouts/
-│   ├── baseof.html                       ← base layout (removes sidebar, adds topnav)
+│   ├── baseof.html                       ← base layout (removes sidebar, adds topnav, back arrow)
 │   ├── home.html                         ← homepage with hero
 │   ├── art.html                          ← Art section — 3 project cards
 │   ├── autour-du-moulin.html             ← Autour du Moulin entry list
@@ -66,13 +66,19 @@ Last updated: May 7, 2026
     │       │   ├── _index.md
     │       │   ├── le-projet/
     │       │   ├── echeancier/
-    │       │   └── atelier/                  ← added May 2026
+    │       │   ├── atelier/                  ← added May 7 2026
+    │       │   ├── materiaux-et-processus/   ← added May 14 2026
+    │       │   └── energie-du-train/         ← added May 14 2026
     │       ├── perpetuelle/index.md
     │       └── recherche-et-experimentation/index.md
     ├── en/                               ← mirrors fr/ structure
+    │   ├── about/index.md                ← added May 7 2026
+    │   ├── archives/index.md             ← added May 14 2026
     │   ├── references/_index.md          ← added May 2026
     │   └── search/index.md               ← added May 2026
     └── es/                               ← mirrors fr/ structure
+        ├── about/index.md                ← added May 7 2026
+        ├── archives/index.md             ← added May 14 2026
         ├── references/_index.md          ← added May 2026
         └── search/index.md               ← added May 2026
 ```
@@ -82,7 +88,7 @@ Last updated: May 7, 2026
 ## 4. Custom Layout Files
 
 ### baseof.html
-Overrides Stack's base template. Removes sidebar block, adds topnav partial, keeps Stack's footer JS via `footer/include.html`. Note: does NOT include `footer/footer.html` directly (search template handles that itself).
+Overrides Stack's base template. Removes sidebar block, adds topnav partial, keeps Stack's footer JS via `footer/include.html`. Adds `← Retour` back arrow above content on all pages except homepage via `{{- if not .IsHome }}`. Note: does NOT include `footer/footer.html` directly (search template handles that itself).
 
 ### home.html
 Homepage — shows site title, tagline (from `params.sidebar.subtitle`), hero image (from `params.hero.image`). Placeholder shown if no image set.
@@ -139,6 +145,11 @@ outputs:
     - html
     - json                                      # required for search
 
+markup:                                         # added May 14 2026
+  goldmark:
+    renderer:
+      unsafe: true                              # allows raw HTML in markdown (e.g. <img> tags)
+
 languages:
   fr:
     contentDir: "content/fr"
@@ -165,6 +176,16 @@ type: "page"                # required — tells Hugo to use layouts/page/search
 outputs:
     - html
     - json
+draft: false
+---
+```
+
+### Archives page (archives/index.md) — all languages — added May 14 2026
+```yaml
+---
+title: "Archive"            # or Archive / Archivo
+layout: "archives"
+type: "archives"
 draft: false
 ---
 ```
@@ -260,11 +281,27 @@ for f in ~/Documents/hugo/img/*.jpeg; do
   magick "$f" -resize 800x -quality 75 ~/Documents/hugo/stack/content/fr/art/autour-du-moulin/entry-name/"$(basename "$f")"
 done
 
+# Batch convert .png to .jpg with low res output — added May 14 2026
+mkdir -p ~/Documents/hugo/img/img_low-res
+for f in ~/Documents/hugo/img/*.png; do
+  magick "$f" -resize 800x -quality 75 ~/Documents/hugo/img/img_low-res/"$(basename "${f%.png}").jpg"
+done
+
 # Check size
 ls -lh path/to/image.jpg
 ```
 
 Note: images from camera are often `.jpeg` or `.JPG` — adjust extension in the batch command accordingly.
+
+### Sizing images in markdown — added May 14 2026
+With `markup.goldmark.renderer.unsafe: true` in config.yaml, use HTML directly in markdown:
+
+```html
+<img src="image.jpg" alt="description" style="width: 25%;">
+*caption text*
+```
+
+Images in `.article-content` are centered automatically via section 17 of custom.scss.
 
 - **Hero image:** `static/hero.jpg` — referenced in config.yaml
 - **Art card cover:** same folder as section `_index.md`, referenced as `image: cover.jpg`
@@ -294,12 +331,12 @@ GitHub Actions auto-deploys on every push to main.
 |---|---|---|---|---|
 | Homepage | ✓ | ✓ | ✓ | Hero image from static/ |
 | Art — 3 cards | ✓ | ✓ | ✓ | Sorted by weight |
-| Autour du Moulin | ✓ | ✓ | ✓ | 3 entries: le-projet, echeancier, atelier |
+| Autour du Moulin | ✓ | ✓ | ✓ | 5 entries: le-projet, echeancier, atelier, materiaux-et-processus, energie-du-train |
 | Perpetuelle | ✓ | ✓ | ✓ | External link |
 | Recherche et expérimentation | ✓ | ✓ | ✓ | Single page |
-| Archive | ✓ | — | — | Stack built-in, auto |
+| Archive | ✓ | ✓ | ✓ | EN/ES added May 14 2026 |
 | Liens utiles | ✓ | ✓ | ✓ | EN/ES added May 2026 |
-| À propos | ✓ | ✓ | ✓ | Full CV |
+| À propos | ✓ | ✓ | ✓ | Full CV — FR corrected May 2026 |
 | Search | ✓ | ✓ | ✓ | EN/ES added May 2026 |
 
 ---
@@ -308,7 +345,10 @@ GitHub Actions auto-deploys on every push to main.
 
 - [x] Liens utiles EN and ES versions
 - [x] Search page EN and ES versions
+- [x] Archive EN and ES versions
 - [x] Change baseURL to live URL in config.yaml
+- [x] Back arrow navigation — consistent across all pages via baseof.html
+- [x] Light mode text visibility fix
 - [ ] Auto-translation via Anthropic API (API key setup pending)
 - [ ] Self-hosting migration (Phase 2)
 - [ ] Giscus comments re-enable when self-hosting
@@ -319,7 +359,7 @@ GitHub Actions auto-deploys on every push to main.
 
 | Theme file | Our override | Purpose |
 |---|---|---|
-| layouts/baseof.html | layouts/baseof.html | Remove sidebar, add topnav |
+| layouts/baseof.html | layouts/baseof.html | Remove sidebar, add topnav, add back arrow |
 | layouts/home.html | layouts/home.html | Custom hero homepage |
 | layouts/page/search.html | layouts/page/search.html | Enable search (copied from theme) |
 | layouts/page/search.json | layouts/page/search.json | Enable search (copied from theme) |
@@ -366,12 +406,54 @@ bash mirror-entry.sh content/fr/art/...  # mirror entry to EN/ES
 find ~/Documents/hugo/stack/content -type f -name "*.md" | sort  # list all content
 xattr -rc ~/Documents/hugo/stack/content # fix VS Code permission errors
 git add . && git commit -m "msg" && git push  # commit and deploy
+cd ..                                     # go back one directory in terminal
 ```
 
 ## 15. Known Gotchas
 
 - **Search requires `type: "page"`** in front matter — without it Hugo won't find `layouts/page/search.html`
 - **Search content must be a page bundle** — use `search/index.md`, not `search.md`
+- **Archive requires its own content file** in each language — `archives/index.md` with `layout: "archives"` and `type: "archives"`
 - **`footer/footer.html` must not be in baseof.html** — the search template calls it itself; double-loading breaks search
 - **`outputs` needs both `home` and `page` with `json`** — `home` alone is not enough for search to work
 - **Avoid backslash folder names** — a rogue `content\` folder (with backslash) was causing EN/ES content to be invisible to Hugo. Always verify with `ls -la | grep content`
+- **`markup.goldmark.renderer.unsafe: true`** required in config.yaml to use raw HTML (`<img>` tags) in markdown files — added May 14 2026
+- **Renaming an entry folder** — stop the server first, rename with `mv`, update title in front matter, then restart
+- **Always run hugo server from the stack folder** — `cd ~/Documents/hugo/stack && hugo server -D`
+
+---
+
+## 16. custom.scss additions — May 14 2026
+
+### Section 16 — Light mode readable text colors
+```scss
+// ------------------------------------------------------------------
+// 16. Light mode — readable text colors
+// ------------------------------------------------------------------
+[data-scheme="light"] {
+    .adm-entry-title,
+    .art-card-title,
+    .ref-title,
+    .section-title {
+        color: #1a1a1a !important;
+    }
+
+    .adm-entry-date,
+    .art-card-description,
+    .ref-note,
+    .section-description {
+        color: #555555 !important;
+    }
+}
+```
+
+### Section 17 — Article images centered by default
+```scss
+// ------------------------------------------------------------------
+// 17. Article images — centered by default
+// ------------------------------------------------------------------
+.article-content img {
+    display: block;
+    margin: 0 auto;
+}
+```

@@ -11,6 +11,9 @@
 
         <div class="container main-container flex on-phone--column compact topnav-layout">
             <main class="main full-width">
+                {{- if not .IsHome }}
+                <a class="section-back" href="javascript:history.back()">← Retour</a>
+                {{- end }}
                 {{- block "main" . }}{{- end }}
             </main>
         </div>
