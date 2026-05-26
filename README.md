@@ -457,3 +457,37 @@ cd ..                                     # go back one directory in terminal
     margin: 0 auto;
 }
 ```
+---
+
+## 17. Video Hosting Options — May 14 2026
+
+Exploring alternatives to YouTube/Vimeo for embedding videos in entries. Priority: open source values, autonomy, no ads.
+
+| Platform | Type | Cost | Notes |
+|---|---|---|---|
+| PeerTube | Self-hosted / federated | Free (needs server) | Open source, part of Fediverse, full control. Best fit for open source values. Fits Phase 2 self-hosting plan. |
+| framatube.org | PeerTube instance | Free | Existing arts/culture instance — no server needed, just create account |
+| peertube.social | PeerTube instance | Free | Another public instance — no server needed |
+| Internet Archive | Hosted | Free | Open, no ads, permanent storage. Good for archival/documentation content. |
+| Bunny Stream | Hosted indie | ~$10/mo | Not open source but indie company, no tracking, clean embeds, affordable |
+| Cloudflare Stream | Hosted | ~$5/mo | Fast, simple embed, no branding. Not open source. |
+
+### Embedding in Hugo markdown
+Any platform that provides an embed code works via `<iframe>` (requires `markup.goldmark.renderer.unsafe: true` — already set):
+
+```html
+<iframe src="https://framatube.org/videos/embed/VIDEO-ID"
+  width="560" height="315"
+  allowfullscreen>
+</iframe>
+```
+
+Or direct video file via `<video>` tag:
+
+```html
+<video controls width="100%">
+  <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+**Recommendation:** Start with a PeerTube account on framatube.org or peertube.social (no server needed now), migrate to self-hosted PeerTube in Phase 2.

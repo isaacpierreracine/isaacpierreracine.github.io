@@ -23,12 +23,10 @@ L'objectif est d'intégrer le plus d'éléments usagés ou recyclés possible. C
 #### Prise de contact
 Jérome Bouchard du Fabbulles m'a référé à Mme Emilie Dupont de [La Société d'Aide aux développement des Communauté du Kamouraska - SADC](https://www.sadc-cae.ca/fr/sadc/sadc-kamouraska/) qui m'a référé à Alexandre Jolicoeur, responsable du projet La symbiose Industrielle et à travers lequel j'ai pu obtenir un listing de toutes les industries de la région possédant des excédentaires de matériaux. La liste est très exhaustive mais peu pratique et pas très fiable. Ceci dit lors d'une conversation avec Alexandre nous avons pu discuter du projet et il m'a proposé quelques contacts qui traitent de domaines d'intérêt pour le projet. 
 
-D'Amour métal, Lislet
-[ Acier JM Bastille](https://www.jmbastille.com/), Rivière du Loup
-[CoÉco](https://co-eco.org/), Philippe Bigonesse, R.D.L 418 856 2628 ext 204
-Mr. Tommy Bélanger (réparateur d'éolienne)
-[Bélanger Électrique](https://belanger-electrique.com/) (Mr. Tommy Bélanger, 80 Route Jeffrey, Sainte-Anne-de-La-Pocatière, G0R 1Z0
-Téléphone - Shop: 418-856-4617 
+- D'Amour métal, Lislet.
+- [ Acier JM Bastille](https://www.jmbastille.com/), Rivière du Loup
+- [CoÉco](https://co-eco.org/), Philippe Bigonesse, R.D.L.  418 856 2628 ext 204 ou 581 337 8514 (cell.)
+- [Bélanger Électrique](https://belanger-electrique.com/) att. Tommy Bélanger - connaît le milieu des éoliennes dans la région. Téléphone - 80 Route Jeffrey Sainte-Anne-de-La-Pocatière, G0R 1Z0Shop: 418-856-4617.  
 
 Avec Alexandre Jolicoeur nous avons profiter de la conversation pour discuter de possibles approches de visualisation de l'énergie naturelle et et son accumulation: 
 
