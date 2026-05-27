@@ -1,11 +1,11 @@
 ---
-title: "Matériaux"
+title: "Processus"
 date: 2026-05-10
 image: image01.jpg
 draft: false
 ---
 
-Ce projet de recherche consiste à consiste à créer la maquette d'une sculpture cinétique fabriqué de matériaux recyclés et qui est énergétiquement autonôme. L'idée originale suppose la création d'un seul élément monumental mais pendant cette étape de recherche et d'exploration je veux me libérer de toutes idées pré-conçues et rester ouvert à la possibilité d'une installation composées de plusieurs éléments complémentaires et en interaction.  
+Ce projet de recherche consiste à créer la maquette d'une sculpture cinétique fabriqué de matériaux recyclés et qui est énergétiquement autonôme. L'idée originale suppose la création d'un seul élément monumental mais pendant cette étape de recherche et d'exploration je veux me libérer de toutes idées pré-conçues et rester ouvert à la possibilité d'une installation composées de plusieurs éléments complémentaires et en interaction.  
 
 <img src="image01.jpg" alt="énergie solaire" style="width: 35%;">
 

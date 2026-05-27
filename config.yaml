@@ -37,6 +37,8 @@ params:
   hero:
     image: hero.jpg
     alt: "Isaac Pierre Racine"
+  dateFormat:
+    published: "2 January 2006"
 
 outputs:
   home:
@@ -136,3 +138,4 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+

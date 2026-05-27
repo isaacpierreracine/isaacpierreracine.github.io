@@ -1,5 +1,5 @@
 ---
-title: "Matériaux et Processus"
+title: "Matériaux"
 date: 2026-05-10
 image: image01.jpg
 draft: false
