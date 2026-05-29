@@ -1,6 +1,6 @@
 # isaacpierreracine.github.io — Site Construction Reference
 
-Last updated: May 14, 2026
+Last updated: May 28, 2026
 
 ---
 
@@ -25,6 +25,7 @@ Last updated: May 14, 2026
 - **Never edit the theme folder** — `themes/hugo-theme-stack/` is a git submodule. All customizations live in the site root and override the theme via Hugo's lookup order.
 - **French is the source of truth** — all content is written in French first, then mirrored and translated to EN and ES.
 - **Content lives in language folders** — `content/fr/`, `content/en/`, `content/es/`
+- **Folder naming convention** — folder name uses no spaces or accents (e.g. `liensderecherche`), front matter title uses proper spelling with spaces and accents (e.g. `"Liens de recherche"`). Keep folder name the same across all three languages.
 
 ---
 
@@ -68,19 +69,22 @@ Last updated: May 14, 2026
     │       │   ├── echeancier/
     │       │   ├── atelier/                  ← added May 7 2026
     │       │   ├── materiaux-et-processus/   ← added May 14 2026
-    │       │   └── energie-du-train/         ← added May 14 2026
+    │       │   ├── energie-du-train/         ← added May 14 2026
+    │       │   ├── recherche/                ← added May 26 2026
+    │       │   ├── page-web/                 ← added May 26 2026
+    │       │   └── liensderecherche/         ← added May 28 2026
     │       ├── perpetuelle/index.md
     │       └── recherche-et-experimentation/index.md
     ├── en/                               ← mirrors fr/ structure
     │   ├── about/index.md                ← added May 7 2026
     │   ├── archives/index.md             ← added May 14 2026
-    │   ├── references/_index.md          ← added May 2026
-    │   └── search/index.md               ← added May 2026
+    │   ├── references/_index.md
+    │   └── search/index.md
     └── es/                               ← mirrors fr/ structure
         ├── about/index.md                ← added May 7 2026
         ├── archives/index.md             ← added May 14 2026
-        ├── references/_index.md          ← added May 2026
-        └── search/index.md               ← added May 2026
+        ├── references/_index.md
+        └── search/index.md
 ```
 
 ---
@@ -132,6 +136,8 @@ params:
   comments:
     enabled: false                              # Giscus configured but off
   # sidebar subtitle removed — no tagline on homepage
+  dateFormat:
+    published: "2 January 2006"                 # no day name — added May 26 2026
 
 outputs:
   home:
@@ -250,14 +256,17 @@ draft: false
 
 ### Adding a new French entry
 ```bash
-mkdir -p ~/Documents/hugo/stack/content/fr/art/autour-du-moulin/entry-name
+mkdir -p ~/Documents/hugo/stack/content/fr/art/autour-du-moulin/entryname
 # Create index.md in VS Code with front matter and content
+# Folder name: no spaces or accents (e.g. liensderecherche)
+# Front matter title: proper spelling with spaces and accents (e.g. "Liens de recherche")
+# Keep same folder name across all 3 languages
 ```
 
 ### Mirror to EN and ES
 ```bash
 cd ~/Documents/hugo/stack
-bash mirror-entry.sh content/fr/art/autour-du-moulin/entry-name
+bash mirror-entry.sh content/fr/art/autour-du-moulin/entryname
 ```
 Creates matching folders in `content/en/` and `content/es/`, copies images, creates placeholder `index.md` files marked `TO TRANSLATE`.
 
@@ -282,16 +291,26 @@ for f in ~/Documents/hugo/img/*.jpeg; do
 done
 
 # Batch convert .png to .jpg with low res output — added May 14 2026
-mkdir -p ~/Documents/hugo/img/img_low-res
+mkdir -p ~/Documents/hugo/img/lowres
 for f in ~/Documents/hugo/img/*.png; do
-  magick "$f" -resize 800x -quality 75 ~/Documents/hugo/img/img_low-res/"$(basename "${f%.png}").jpg"
+  magick "$f" -resize 800x -quality 75 ~/Documents/hugo/img/lowres/"$(basename "${f%.png}").jpg"
 done
+
+# Generate markdown image list for all jpg in a folder
+cd ~/Documents/hugo/stack/content/fr/art/autour-du-moulin/entry-name && ls *.jpg | awk '{print "!["$0"]("$0")"}'
 
 # Check size
 ls -lh path/to/image.jpg
 ```
 
 Note: images from camera are often `.jpeg` or `.JPG` — adjust extension in the batch command accordingly.
+
+### Images with gallery layout
+Stack automatically applies a flex gallery layout to inline images (no spaces between them):
+```markdown
+![](image100.jpg)![](image101.jpg)![](image102.jpg)
+```
+Images must be in the **same folder** as the `index.md` for the gallery layout to work. If images are shared across languages, copy them to each language folder.
 
 ### Sizing images in markdown — added May 14 2026
 With `markup.goldmark.renderer.unsafe: true` in config.yaml, use HTML directly in markdown:
@@ -331,7 +350,7 @@ GitHub Actions auto-deploys on every push to main.
 |---|---|---|---|---|
 | Homepage | ✓ | ✓ | ✓ | Hero image from static/ |
 | Art — 3 cards | ✓ | ✓ | ✓ | Sorted by weight |
-| Autour du Moulin | ✓ | ✓ | ✓ | 5 entries: le-projet, echeancier, atelier, materiaux-et-processus, energie-du-train |
+| Autour du Moulin | ✓ | ✓ | ✓ | 7 entries: le-projet, echeancier, atelier, materiaux-et-processus, energie-du-train, recherche, page-web, liensderecherche |
 | Perpetuelle | ✓ | ✓ | ✓ | External link |
 | Recherche et expérimentation | ✓ | ✓ | ✓ | Single page |
 | Archive | ✓ | ✓ | ✓ | EN/ES added May 14 2026 |
@@ -349,6 +368,8 @@ GitHub Actions auto-deploys on every push to main.
 - [x] Change baseURL to live URL in config.yaml
 - [x] Back arrow navigation — consistent across all pages via baseof.html
 - [x] Light mode text visibility fix
+- [x] Date format — no day name
+- [ ] Video embedding — explore PeerTube (see section 17)
 - [ ] Auto-translation via Anthropic API (API key setup pending)
 - [ ] Self-hosting migration (Phase 2)
 - [ ] Giscus comments re-enable when self-hosting
@@ -407,6 +428,7 @@ find ~/Documents/hugo/stack/content -type f -name "*.md" | sort  # list all cont
 xattr -rc ~/Documents/hugo/stack/content # fix VS Code permission errors
 git add . && git commit -m "msg" && git push  # commit and deploy
 cd ..                                     # go back one directory in terminal
+code .                                    # open current folder in VS Code
 ```
 
 ## 15. Known Gotchas
@@ -417,9 +439,11 @@ cd ..                                     # go back one directory in terminal
 - **`footer/footer.html` must not be in baseof.html** — the search template calls it itself; double-loading breaks search
 - **`outputs` needs both `home` and `page` with `json`** — `home` alone is not enough for search to work
 - **Avoid backslash folder names** — a rogue `content\` folder (with backslash) was causing EN/ES content to be invisible to Hugo. Always verify with `ls -la | grep content`
-- **`markup.goldmark.renderer.unsafe: true`** required in config.yaml to use raw HTML (`<img>` tags) in markdown files — added May 14 2026
+- **`markup.goldmark.renderer.unsafe: true`** required in config.yaml to use raw HTML (`<img>` tags) in markdown files
 - **Renaming an entry folder** — stop the server first, rename with `mv`, update title in front matter, then restart
 - **Always run hugo server from the stack folder** — `cd ~/Documents/hugo/stack && hugo server -D`
+- **Gallery images must be local** — Stack's flex gallery layout only works when images are in the same folder as `index.md`. Absolute paths or static folder paths will not trigger the gallery CSS.
+- **Language tabs require matching folder names** — if folder names differ across languages, add `translationKey: "keyname"` to front matter of all three files. Easiest to just keep the same folder name in all languages.
 
 ---
 
@@ -457,6 +481,7 @@ cd ..                                     # go back one directory in terminal
     margin: 0 auto;
 }
 ```
+
 ---
 
 ## 17. Video Hosting Options — May 14 2026
