@@ -1,7 +1,7 @@
 ---
 title: "L'énergie du train"
 date: 2026-05-12
-draft: false
+draft: true
 ---
 
 A première vue le train semble passer de façon régulière mais plus je passe de temps dans l'atelier plus je constate que son horaire est aléatoire. Puisque mon objectif est de capturer son énergie et que je ne suis ni présent ni disponible à tous les moments de la journée (et de la nuit) je me suis proposé de construire un artefact qui me permettrait de créer un registre de son passage et ainsi peut-être déduire son horaire habituel. Le thème de cet exerise s'intitule l'énergie du train et consiste à capturer sous différentes formes l'énergie que le passage du train produit. Je traite de façon plus précise les sources provenant du vent et des vibrations que le train provoque à son passage. 
