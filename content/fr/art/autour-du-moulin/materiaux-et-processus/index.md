@@ -1,14 +1,14 @@
 ---
-title: "Matériaux"
+title: "Matériaux et processus"
 date: 2026-05-10
 image: image01.jpg
 draft: false
 ---
 
+<img src="image01.jpg" alt="étude cinétique" style="width: 50%;"> 
+
 #### Réflexion sur les matériaux
 Ce projet de recherche consiste à consiste à créer la maquette d'une sculpture cinétique fabriqué de matériaux recyclés et qui est énergétiquement autonôme. L'idée originale suppose la création d'un seul élément monumental mais pendant cette étape de recherche et d'exploration je veux me libérer de toutes idées pré-conçues et rester ouvert à la possibilité d'une installation composées de plusieurs éléments complémentaires et en interaction.  
-
-<img src="image01.jpg" alt="énergie solaire" style="width: 35%;">
 
 Je fonctionne d'une façon intuitive de sorte que l'étape de la recherche des matériaux me met en contact avec la réalité concrète. Je me laisse guider par ce qui survient tout en posant des gestes concrets d'interaction avec le monde. La spontanéité opère toujours mais sur un plan oü l'apparente opposition du monde réel et de l'imagination entre en sysnergie.  
 Les fonctions primaires de chaque élément matériel se base sur les 3 besoins principaux: 
@@ -34,6 +34,12 @@ Avec Alexandre Jolicoeur nous avons profiter de la conversation pour discuter de
 - élément Pelletier pour signal très bas voltage utilisant comme example un plaque bi-matériau (cuivre et acier)
 - Pour le storage de l'énergie ou mieux dit 'effet batterie nous avons parlé de colonne d'eau et de principe de pompage en citant la vielle pompe manuelle utilisés jadis pour extraire l'eau de puits. 
 
-Parallèlement, une amies dont le mari est décédé rescemment m'a donné quelques vieux trépieds qu'il a laissé derrière lui. Le triped est en soi un objet qui m'est très utile car il permet de soutenir des éléments et de pouvoir angles, hauteur, et position facilement. Un de ceux qu'elle m'a offert est un objet remarquable; très grand, solide et d'une grande qualité. J'en ai tout de suite profiter pour y accrocher une roue de vélo qui servira la partie de ma recherche sur les effets optiques par la cinétique.  
+J'ai développé le rituel de passer religieusement à l'éco centre - cet endroit où on classe les objets que les gens viennent jeter et s'en débarasser. Pour la phase de prototypage cela m'a parfaitment convenu et j'ai trouvé des éléments très intéressants.  
 
-<img src="image02.jpg" alt="étude cinétique" style="width: 75%;">
+Une amie m'a aussi donné de vieux trépieds que j'ai apprécié car il m'est très utile pour  soutenir des éléments et de pouvoir ajuster les angles, la hauteur et position dans l'espace facilement. Un de ceux qu'elle m'a offert est un objet remarquable; très grand, solide et d'une grande qualité. J'en ai tout de suite profiter pour y accrocher une roue de vélo qui servira la partie de ma recherche sur les effets optiques par la cinétique.  
+
+<img src="image02.jpg" alt="étude cinétique" style="width: 75%;">  
+
+J'ai effectué une session photographique pour travailler sur les proportions, la relation d'objets symbolique d'échelle différente. Une premier essai d'approche à cette dimension que je veux explorer avec la présentation du résultat de ma recherche en septembre 2026.  
+
+![](image01.jpg)![](image02.jpg)![](image131.jpg)![](image132.jpg)![](image133.jpg)![](image134.jpg)
