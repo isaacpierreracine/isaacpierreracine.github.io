@@ -1,6 +1,6 @@
 ---
 title: "Investigación"
-date: 2026-03-01
+date: 2026-03-20
 draft: false
 ---
 

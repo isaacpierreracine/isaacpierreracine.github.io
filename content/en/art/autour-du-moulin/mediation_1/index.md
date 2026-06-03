@@ -1,6 +1,6 @@
 ---
 title: "Mediation"
-date: 2026-05-29
+date: 2026-06-09
 image: image136.jpg
 draft: false
 ---
@@ -10,12 +10,10 @@ Mediation session
 - duration: 1h30 to 2hrs
 - location: 536 ave de la Gare, St-Pascal
 
-The initial meeting with the 'Public Artwork' committee of the City of St-Pascal will give rise to a presentation of the "Autour du Moulin" project, a studio visit followed by a conversation on the themes:
+This session will be the occasion for the first meeting with the 'Public Art' committee of the City of St-Pascal. The programm will be composed of a presentation of the "Autour du Moulin" project, followed by a studio visit and a conversation on the themes:
 
 - the function of public art in the contemporary context: climate crisis and responsible art.
-
 - the relevance of Autour du Moulin: constraints and challenges of the kinetic proposal.
-
 - the location of the future sculpture: the various potential sites on the territory of the municipality.
 
 To conclude it will be possible to discuss freely and interact with some of the artifacts we have produced since the studio was set up on May 04.
