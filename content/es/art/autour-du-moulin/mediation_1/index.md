@@ -1,6 +1,6 @@
 ---
 title: "Mediación"
-date: 2026-05-29
+date: 2026-06-03
 image: image136.jpg
 draft: false
 ---
