@@ -23,4 +23,6 @@ In parallel and as my findings accumulated I created other non-functional compos
 
 ![Refraction](image144.jpg)![Symbols](image142.jpg)![Complementarity of forms](image146.jpg)
 
-![Gravity](image149.jpg)
+![Gravity](image149.jpg) 
+
+<iframe title="video" width="560" height="315" src="https://peertube.wtf/videos/embed/ny9YMRqRjfcgLosiXjjzGp" frameborder="0" allowfullscreen></iframe>

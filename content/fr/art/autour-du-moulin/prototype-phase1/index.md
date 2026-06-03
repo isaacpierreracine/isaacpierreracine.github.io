@@ -23,4 +23,7 @@ Parallèlement et au fur et à mesure de mes trouvailles j'ai créé d'autres co
 
 ![Réfraction](image144.jpg)![Symboles](image142.jpg)![Complémentarité des formes](image146.jpg)
 
-![Gravité](image149.jpg)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe title="video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://peertube.wtf/videos/embed/ny9YMRqRjfcgLosiXjjzGp" frameborder="0" allowfullscreen></iframe>
+</div>
+

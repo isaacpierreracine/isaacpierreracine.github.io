@@ -1,6 +1,6 @@
 # isaacpierreracine.github.io — Site Construction Reference
 
-Last updated: May 28, 2026
+Last updated: June 3, 2026
 
 ---
 
@@ -72,7 +72,9 @@ Last updated: May 28, 2026
     │       │   ├── energie-du-train/         ← added May 14 2026
     │       │   ├── recherche/                ← added May 26 2026
     │       │   ├── page-web/                 ← added May 26 2026
-    │       │   └── liensderecherche/         ← added May 28 2026
+    │       │   ├── liensderecherche/         ← added May 28 2026
+    │       │   ├── prototype-phase1/         ← added June 2 2026
+    │       │   └── mediation_1/              ← added June 2 2026
     │       ├── perpetuelle/index.md
     │       └── recherche-et-experimentation/index.md
     ├── en/                               ← mirrors fr/ structure
@@ -290,6 +292,11 @@ for f in ~/Documents/hugo/img/*.jpeg; do
   magick "$f" -resize 800x -quality 75 ~/Documents/hugo/stack/content/fr/art/autour-du-moulin/entry-name/"$(basename "$f")"
 done
 
+# Batch convert .jpeg to .jpg with low res output
+for f in ~/Documents/hugo/img/*.jpeg; do
+  magick "$f" -resize 800x -quality 75 ~/Documents/hugo/img/lowres/"$(basename "${f%.jpeg}").jpg"
+done
+
 # Batch convert .png to .jpg with low res output — added May 14 2026
 mkdir -p ~/Documents/hugo/img/lowres
 for f in ~/Documents/hugo/img/*.png; do
@@ -303,7 +310,7 @@ cd ~/Documents/hugo/stack/content/fr/art/autour-du-moulin/entry-name && ls *.jpg
 ls -lh path/to/image.jpg
 ```
 
-Note: images from camera are often `.jpeg` or `.JPG` — adjust extension in the batch command accordingly.
+Note: images from camera are often `.jpeg`, `.JPG` or `.heic` — adjust extension in the batch command accordingly. iPhone HEIC files can be batch converted with magick directly.
 
 ### Images with gallery layout
 Stack automatically applies a flex gallery layout to inline images (no spaces between them):
@@ -350,7 +357,7 @@ GitHub Actions auto-deploys on every push to main.
 |---|---|---|---|---|
 | Homepage | ✓ | ✓ | ✓ | Hero image from static/ |
 | Art — 3 cards | ✓ | ✓ | ✓ | Sorted by weight |
-| Autour du Moulin | ✓ | ✓ | ✓ | 7 entries: le-projet, echeancier, atelier, materiaux-et-processus, energie-du-train, recherche, page-web, liensderecherche |
+| Autour du Moulin | ✓ | ✓ | ✓ | 9 entries: le-projet, echeancier, atelier, materiaux-et-processus, energie-du-train, recherche, page-web, liensderecherche, prototype-phase1, mediation_1 |
 | Perpetuelle | ✓ | ✓ | ✓ | External link |
 | Recherche et expérimentation | ✓ | ✓ | ✓ | Single page |
 | Archive | ✓ | ✓ | ✓ | EN/ES added May 14 2026 |
@@ -369,9 +376,10 @@ GitHub Actions auto-deploys on every push to main.
 - [x] Back arrow navigation — consistent across all pages via baseof.html
 - [x] Light mode text visibility fix
 - [x] Date format — no day name
-- [ ] Video embedding — explore PeerTube (see section 17)
+- [x] Video embedding — PeerTube account created on peertube.wtf (see section 17)
 - [ ] Auto-translation via Anthropic API (API key setup pending)
 - [ ] Self-hosting migration (Phase 2)
+- [ ] Migrate PeerTube to self-hosted instance in Phase 2
 - [ ] Giscus comments re-enable when self-hosting
 
 ---
@@ -422,6 +430,7 @@ GitHub Discussions enabled. Giscus app installed. Decision: comments on main pag
 
 ```bash
 hugo server -D                            # start local server with drafts
+hugo server -D -F                         # include future-dated entries
 hugo -D 2>&1                              # full build, check errors
 bash mirror-entry.sh content/fr/art/...  # mirror entry to EN/ES
 find ~/Documents/hugo/stack/content -type f -name "*.md" | sort  # list all content
@@ -444,6 +453,7 @@ code .                                    # open current folder in VS Code
 - **Always run hugo server from the stack folder** — `cd ~/Documents/hugo/stack && hugo server -D`
 - **Gallery images must be local** — Stack's flex gallery layout only works when images are in the same folder as `index.md`. Absolute paths or static folder paths will not trigger the gallery CSS.
 - **Language tabs require matching folder names** — if folder names differ across languages, add `translationKey: "keyname"` to front matter of all three files. Easiest to just keep the same folder name in all languages.
+- **Future-dated entries won't show** — Hugo hides entries with a future date by default. Use `hugo server -D -F` locally to see them. They go live automatically on the live site once their date arrives.
 
 ---
 
@@ -484,35 +494,44 @@ code .                                    # open current folder in VS Code
 
 ---
 
-## 17. Video Hosting Options — May 14 2026
+## 17. Video Hosting — June 3 2026
 
-Exploring alternatives to YouTube/Vimeo for embedding videos in entries. Priority: open source values, autonomy, no ads.
+**Chosen platform: peertube.wtf** — account created June 3 2026.
+- Account: isaacbcn
+- Channel: autourdumoulin — https://peertube.wtf/video-channels/autourdumoulin
 
+PeerTube is open source, federated (Fediverse), no ads, no algorithm. Plan to migrate to self-hosted PeerTube instance in Phase 2.
+
+### Getting the thumbnail URL for a video
+Go to: `https://peertube.wtf/api/v1/videos/VIDEO-ID`
+Look for `thumbnailPath` field — prepend `https://peertube.wtf` to get the full URL.
+
+### Full width responsive embed (no black side bars)
+```html
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe title="video title" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://peertube.wtf/videos/embed/VIDEO-ID" frameborder="0" allowfullscreen></iframe>
+</div>
+```
+
+### Thumbnail with play button (click to play inline)
+```html
+<div id="video-container" style="width: 300px; cursor: pointer; position: relative;" onclick="this.innerHTML='<iframe width=300 height=169 src=https://peertube.wtf/videos/embed/VIDEO-ID?autoplay=1 frameborder=0 allowfullscreen></iframe>'">
+  <img src="THUMBNAIL-URL" style="width: 300px; height: 169px; object-fit: cover;">
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid white; margin-left: 4px;"></div>
+  </div>
+</div>
+```
+
+Replace `VIDEO-ID` with your video's short UUID and `THUMBNAIL-URL` with the full thumbnail URL from the API.
+
+**Note:** Use `/videos/embed/VIDEO-ID` not `/w/VIDEO-ID` in the src — the `/w/` URL does not work for embedding.
+
+### Other platforms considered
 | Platform | Type | Cost | Notes |
 |---|---|---|---|
-| PeerTube | Self-hosted / federated | Free (needs server) | Open source, part of Fediverse, full control. Best fit for open source values. Fits Phase 2 self-hosting plan. |
-| framatube.org | PeerTube instance | Free | Existing arts/culture instance — no server needed, just create account |
-| peertube.social | PeerTube instance | Free | Another public instance — no server needed |
-| Internet Archive | Hosted | Free | Open, no ads, permanent storage. Good for archival/documentation content. |
-| Bunny Stream | Hosted indie | ~$10/mo | Not open source but indie company, no tracking, clean embeds, affordable |
-| Cloudflare Stream | Hosted | ~$5/mo | Fast, simple embed, no branding. Not open source. |
-
-### Embedding in Hugo markdown
-Any platform that provides an embed code works via `<iframe>` (requires `markup.goldmark.renderer.unsafe: true` — already set):
-
-```html
-<iframe src="https://framatube.org/videos/embed/VIDEO-ID"
-  width="560" height="315"
-  allowfullscreen>
-</iframe>
-```
-
-Or direct video file via `<video>` tag:
-
-```html
-<video controls width="100%">
-  <source src="video.mp4" type="video/mp4">
-</video>
-```
-
-**Recommendation:** Start with a PeerTube account on framatube.org or peertube.social (no server needed now), migrate to self-hosted PeerTube in Phase 2.
+| framatube.org | PeerTube instance | Free | Registration closed Jun 2026 |
+| peertube.social | PeerTube instance | Free | Domain redirected to unrelated site |
+| Internet Archive | Hosted | Free | Open, no ads, permanent storage |
+| Bunny Stream | Hosted indie | ~$10/mo | No tracking, clean embeds |
+| Cloudflare Stream | Hosted | ~$5/mo | Fast, simple embed |
