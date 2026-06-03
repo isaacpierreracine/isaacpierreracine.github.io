@@ -46,6 +46,8 @@ Last updated: June 3, 2026
 │   ├── art.html                          ← Art section — 3 project cards
 │   ├── autour-du-moulin.html             ← Autour du Moulin entry list
 │   ├── references.html                   ← Liens utiles — tag-filtered list
+│   ├── shortcodes/
+│   │   └── peertube.html                 ← PeerTube video shortcode — added June 3 2026
 │   ├── page/
 │   │   ├── search.html                   ← copied from theme — required for search
 │   │   └── search.json                   ← copied from theme — required for search
@@ -107,6 +109,9 @@ Entry list sorted newest first. Shows title, italic date, thumbnail on right. Ha
 
 ### references.html
 Liens utiles page. Auto-collects tags from all entries. Client-side tag filter. Supports `url_externe` for external links.
+
+### shortcodes/peertube.html
+PeerTube video shortcode — see section 17 for usage.
 
 ### page/search.html + page/search.json
 Copied from theme into `layouts/page/` — required override so Hugo can find the search template. Do not edit.
@@ -402,6 +407,7 @@ New layouts (no theme equivalent):
 - `layouts/references.html`
 - `layouts/_default/index.json`
 - `layouts/_partials/topnav.html`
+- `layouts/shortcodes/peertube.html`
 
 ---
 
@@ -502,30 +508,26 @@ code .                                    # open current folder in VS Code
 
 PeerTube is open source, federated (Fediverse), no ads, no algorithm. Plan to migrate to self-hosted PeerTube instance in Phase 2.
 
-### Getting the thumbnail URL for a video
-Go to: `https://peertube.wtf/api/v1/videos/VIDEO-ID`
-Look for `thumbnailPath` field — prepend `https://peertube.wtf` to get the full URL.
+### PeerTube shortcode — added June 3 2026
+File: `layouts/shortcodes/peertube.html`
 
-### Full width responsive embed (no black side bars)
-```html
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe title="video title" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://peertube.wtf/videos/embed/VIDEO-ID" frameborder="0" allowfullscreen></iframe>
-</div>
+**Thumbnail with play button (click to expand, click ✕ to close):**
+```markdown
+{{< peertube id="VIDEO-ID" img="image138.jpg" >}}
 ```
 
-### Thumbnail with play button (click to play inline)
-```html
-<div id="video-container" style="width: 300px; cursor: pointer; position: relative;" onclick="this.innerHTML='<iframe width=300 height=169 src=https://peertube.wtf/videos/embed/VIDEO-ID?autoplay=1 frameborder=0 allowfullscreen></iframe>'">
-  <img src="THUMBNAIL-URL" style="width: 300px; height: 169px; object-fit: cover;">
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-    <div style="width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid white; margin-left: 4px;"></div>
-  </div>
-</div>
+**Full width responsive embed:**
+```markdown
+{{< peertube id="VIDEO-ID" full="true" >}}
 ```
 
-Replace `VIDEO-ID` with your video's short UUID and `THUMBNAIL-URL` with the full thumbnail URL from the API.
+**Parameters:**
+- `id` — required — the video ID from the URL (e.g. `ny9YMRqRjfcgLosiXjjzGp`)
+- `img` — optional — local image to use as thumbnail (default: `image01.jpg`)
+- `full` — optional — set to `"true"` for full width embed (default: thumbnail mode)
+- `instance` — optional — PeerTube instance (default: `peertube.wtf`)
 
-**Note:** Use `/videos/embed/VIDEO-ID` not `/w/VIDEO-ID` in the src — the `/w/` URL does not work for embedding.
+**Getting the video ID:** go to your video on peertube.wtf — the ID is the last part of the URL: `https://peertube.wtf/w/VIDEO-ID`
 
 ### Other platforms considered
 | Platform | Type | Cost | Notes |

@@ -17,13 +17,24 @@ J'ai fabriqué quelques "artefacts" qui interagissent avec l'énergie éolienne 
 
 ![tour de captation éolien](image143.1.jpg)![](image135.jpg)![](image199.jpg)
 
-Parallèlement et au fur et à mesure de mes trouvailles j'ai créé d'autres compositions non-fonctionnelles dans l'objectif de créer des relations symboliques en juxtaposant des objets issus du quotidien. J'en ai profité surtout pour continuer à visiter la thématique des formes, de leur sens et dialogue, et d'observer leur équilibre.
+Parallèlement et au fur et à mesure de mes trouvailles j'ai assemblé d'autres compositions non-fonctionnelles dans l'objectif de créer des relations symboliques en juxtaposant des objets issus du quotidien. J'en ai profité surtout pour continuer à visiter la thématique des formes, de leur sens et dialogue, et d'observer leur équilibre.
 
 ![Gravité et magnétisme](image140.jpg)
 
 ![Réfraction](image144.jpg)![Symboles](image142.jpg)![Complémentarité des formes](image146.jpg)
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe title="video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://peertube.wtf/videos/embed/ny9YMRqRjfcgLosiXjjzGp" frameborder="0" allowfullscreen></iframe>
-</div>
+![Onde de vibration](image149.jpg)  
+
+Le médium vidéo permet de mieux apprécier la nature cinétique des études effectuées utilisant l'énergie du train qui passe avec le vent qu'il crée et les vibrations qu'il produit. Puis j'ai expérimenté avec son transfert en courant électrique et d'activer des artefacts de visualisation.
+
+{{< peertube id="ny9YMRqRjfcgLosiXjjzGp" img="image149.jpg" >}}
+{{< peertube id="3zA3guizXY2ZdiVRJA4urN" img="image151.jpg" >}}
+{{< peertube id="7iZzhRLG71sC9EV92g41rN" img="image157.jpg" >}}
+{{< peertube id="2JXcZZYapwLj492vXgqxpb" img="image141.jpg" >}}
+{{< peertube id="cY3ZZ9gAz9rqeYdkCbx3og" img="image152.jpg" >}}
+{{< peertube id="cWKwBVuFH5sUGQkeqetH6o" img="image153.jpg" >}}
+{{< peertube id="upNR7GgHpz8ZogPhPD54m6" img="image138.jpg" >}}
+{{< peertube id="xjh5yU97jQJAe56t7sk98N" img="image02.jpg" >}}
+
+{{< peertube id="kEErejESC93wwMy4VejYtm" full="true" >}}
 

@@ -21,6 +21,17 @@ Paralelamente y a medida que avanzaban mis hallazgos creé otras composiciones n
 
 ![Refracción](image144.jpg)![Símbolos](image142.jpg)![Complementariedad de las formas](image146.jpg)
 
-![Gravedad](image149.jpg)
+![Onda de vibración](image149.jpg)  
 
-<iframe title="video" width="560" height="315" src="https://peertube.wtf/videos/embed/ny9YMRqRjfcgLosiXjjzGp" frameborder="0" allowfullscreen></iframe>
+El medio video permite apreciar mejor la naturaleza cinética de los estudios realizados utilizando la energía del tren que pasa, con el viento que crea y las vibraciones que produce. Luego experimenté con su transferencia en corriente eléctrica y con activar artefactos de visualización.
+
+{{< peertube id="ny9YMRqRjfcgLosiXjjzGp" img="image149.jpg" >}}
+{{< peertube id="3zA3guizXY2ZdiVRJA4urN" img="image151.jpg" >}}
+{{< peertube id="7iZzhRLG71sC9EV92g41rN" img="image157.jpg" >}}
+{{< peertube id="2JXcZZYapwLj492vXgqxpb" img="image141.jpg" >}}
+{{< peertube id="cY3ZZ9gAz9rqeYdkCbx3og" img="image152.jpg" >}}
+{{< peertube id="cWKwBVuFH5sUGQkeqetH6o" img="image153.jpg" >}}
+{{< peertube id="upNR7GgHpz8ZogPhPD54m6" img="image138.jpg" >}}
+{{< peertube id="xjh5yU97jQJAe56t7sk98N" img="image02.jpg" >}}
+
+{{< peertube id="kEErejESC93wwMy4VejYtm" full="true" >}}
