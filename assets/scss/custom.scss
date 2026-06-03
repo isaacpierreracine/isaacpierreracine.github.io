@@ -364,7 +364,7 @@ li#dark-mode-toggle.topnav-toggle,
 
 .art-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
 }
 
@@ -810,8 +810,8 @@ body > #dark-mode-toggle {
 }
 
 .art-card-badge--section {
-    color: #ffffff !important;
-    border-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
 }
 
 // ------------------------------------------------------------------
@@ -845,4 +845,43 @@ body > #dark-mode-toggle {
 .article-content img {
     display: block;
     margin: 0 auto;
+}
+// ------------------------------------------------------------------
+// 18. Art card body — white text always
+// ------------------------------------------------------------------
+.art-card-title {
+    color: #ffffff !important;
+}
+
+.art-card-description {
+    color: #cccccc !important;
+}
+
+.art-card-count {
+    color: #aaaaaa !important;
+}
+
+// ------------------------------------------------------------------
+// 19. Art card body — black background, white text
+// ------------------------------------------------------------------
+.art-card-body {
+    background: #000000 !important;
+}
+
+// ------------------------------------------------------------------
+// 20. Art card body — force white text in light mode
+// ------------------------------------------------------------------
+[data-scheme="light"] .art-card-title,
+[data-scheme="light"] .art-card-description,
+[data-scheme="light"] .art-card-count {
+    color: #ffffff !important;
+}
+
+// ------------------------------------------------------------------
+
+// ------------------------------------------------------------------
+// 22. Gallery — contain images within content margins
+// ------------------------------------------------------------------
+.article-content p {
+    overflow: hidden;
 }

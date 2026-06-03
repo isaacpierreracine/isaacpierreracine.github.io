@@ -4,7 +4,7 @@ description: "Journal de projet — entrées chronologiques."
 layout: "autour-du-moulin"
 weight: 1
 draft: false
-image: cover.jpg
+image: image156.jpg
 cascade:
   hideHeroImage: true
 ---

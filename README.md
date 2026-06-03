@@ -2,6 +2,8 @@
 
 Last updated: June 3, 2026
 
+> **Note for Claude:** Always confirm with Isaac that this is the latest README before making any updates.
+
 ---
 
 ## 1. Overview
@@ -361,7 +363,7 @@ GitHub Actions auto-deploys on every push to main.
 | Section | FR | EN | ES | Notes |
 |---|---|---|---|---|
 | Homepage | ✓ | ✓ | ✓ | Hero image from static/ |
-| Art — 3 cards | ✓ | ✓ | ✓ | Sorted by weight |
+| Art — 3 cards | ✓ | ✓ | ✓ | Sorted by weight — 2 per row |
 | Autour du Moulin | ✓ | ✓ | ✓ | 9 entries: le-projet, echeancier, atelier, materiaux-et-processus, energie-du-train, recherche, page-web, liensderecherche, prototype-phase1, mediation_1 |
 | Perpetuelle | ✓ | ✓ | ✓ | External link |
 | Recherche et expérimentation | ✓ | ✓ | ✓ | Single page |
@@ -382,6 +384,7 @@ GitHub Actions auto-deploys on every push to main.
 - [x] Light mode text visibility fix
 - [x] Date format — no day name
 - [x] Video embedding — PeerTube account created on peertube.wtf (see section 17)
+- [x] Art cards — 2 per row, white text on dark card body
 - [ ] Auto-translation via Anthropic API (API key setup pending)
 - [ ] Self-hosting migration (Phase 2)
 - [ ] Migrate PeerTube to self-hosted instance in Phase 2
@@ -460,16 +463,39 @@ code .                                    # open current folder in VS Code
 - **Gallery images must be local** — Stack's flex gallery layout only works when images are in the same folder as `index.md`. Absolute paths or static folder paths will not trigger the gallery CSS.
 - **Language tabs require matching folder names** — if folder names differ across languages, add `translationKey: "keyname"` to front matter of all three files. Easiest to just keep the same folder name in all languages.
 - **Future-dated entries won't show** — Hugo hides entries with a future date by default. Use `hugo server -D -F` locally to see them. They go live automatically on the live site once their date arrives.
+- **VS Code empty folder** — if VS Code shows empty project, run `rm -rf ~/Library/Application\ Support/Code/User/workspaceStorage` then `code ~/Documents/hugo/stack`. Also add `"security.workspace.trust.enabled": false` to VS Code user settings to prevent recurring issue.
 
 ---
 
-## 16. custom.scss additions — May 14 2026
+## 16. custom.scss — Section Index
+
+| Section | Purpose | Added |
+|---|---|---|
+| 1 | Design tokens (CSS variables) | original |
+| 2 | Hide left sidebar + hamburger | original |
+| 3 | Fix main container layout | original |
+| 4 | Top navigation bar | original |
+| 5 | Hero — homepage | original |
+| 6 | Footer | original |
+| 7 | Mobile responsive | original |
+| 8 | Section header (Art, Références) | original |
+| 9 | Art section — project cards | original |
+| 10 | References section | original |
+| 11 | Autour du Moulin — entry list + `.section-back` back arrow style | original |
+| 12 | Hide Stack JS-injected UI elements | original |
+| 13 | Language switcher | original |
+| 14 | Search button | original |
+| 15 | Article body — tighter spacing | original |
+| 16 | Light mode — readable text colors | May 14 2026 |
+| 17 | Article images — centered by default | May 14 2026 |
+| 18 | Art card body — white text always | June 3 2026 |
+| 19 | Art card body — black background | June 3 2026 |
+| 20 | Art card body — force white text in light mode | June 3 2026 |
+| 21 | Video grid — matches image gallery width | June 3 2026 |
+| 22 | Gallery — contain images within content margins | June 3 2026 |
 
 ### Section 16 — Light mode readable text colors
 ```scss
-// ------------------------------------------------------------------
-// 16. Light mode — readable text colors
-// ------------------------------------------------------------------
 [data-scheme="light"] {
     .adm-entry-title,
     .art-card-title,
@@ -477,7 +503,6 @@ code .                                    # open current folder in VS Code
     .section-title {
         color: #1a1a1a !important;
     }
-
     .adm-entry-date,
     .art-card-description,
     .ref-note,
@@ -487,15 +512,46 @@ code .                                    # open current folder in VS Code
 }
 ```
 
-### Section 17 — Article images centered by default
+### Section 17 — Article images centered
 ```scss
-// ------------------------------------------------------------------
-// 17. Article images — centered by default
-// ------------------------------------------------------------------
 .article-content img {
     display: block;
     margin: 0 auto;
 }
+```
+
+### Section 18 — Art card white text
+```scss
+.art-card-title { color: #ffffff !important; }
+.art-card-description { color: #cccccc !important; }
+.art-card-count { color: #aaaaaa !important; }
+```
+
+### Section 20 — Force white text in light mode
+```scss
+[data-scheme="light"] .art-card-title,
+[data-scheme="light"] .art-card-description,
+[data-scheme="light"] .art-card-count {
+    color: #ffffff !important;
+}
+```
+
+### Section 21 — Video grid
+```scss
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    width: 100%;
+    margin: 16px 0;
+}
+.video-grid span { display: block !important; width: 100% !important; aspect-ratio: 16/9; }
+.video-grid span img { width: 100% !important; height: 100% !important; object-fit: cover; margin: 0 !important; }
+```
+
+### Section 22 — Gallery images contained
+```scss
+.article-content p { overflow: hidden; }
 ```
 
 ---
@@ -508,12 +564,17 @@ code .                                    # open current folder in VS Code
 
 PeerTube is open source, federated (Fediverse), no ads, no algorithm. Plan to migrate to self-hosted PeerTube instance in Phase 2.
 
-### PeerTube shortcode — added June 3 2026
+### PeerTube shortcode
 File: `layouts/shortcodes/peertube.html`
 
-**Thumbnail with play button (click to expand, click ✕ to close):**
+**Thumbnail with play button — click opens overlay player, ✕ to close:**
 ```markdown
 {{< peertube id="VIDEO-ID" img="image138.jpg" >}}
+```
+
+**Multiple videos in a row — wrap in video-grid div:**
+```html
+<div class="video-grid">{{< peertube id="ID1" img="img1.jpg" >}}{{< peertube id="ID2" img="img2.jpg" >}}{{< peertube id="ID3" img="img3.jpg" >}}</div>
 ```
 
 **Full width responsive embed:**
@@ -522,12 +583,10 @@ File: `layouts/shortcodes/peertube.html`
 ```
 
 **Parameters:**
-- `id` — required — the video ID from the URL (e.g. `ny9YMRqRjfcgLosiXjjzGp`)
-- `img` — optional — local image to use as thumbnail (default: `image01.jpg`)
-- `full` — optional — set to `"true"` for full width embed (default: thumbnail mode)
+- `id` — required — video ID from URL: `https://peertube.wtf/w/VIDEO-ID`
+- `img` — optional — local image as thumbnail (default: `image01.jpg`)
+- `full` — optional — `"true"` for full width embed
 - `instance` — optional — PeerTube instance (default: `peertube.wtf`)
-
-**Getting the video ID:** go to your video on peertube.wtf — the ID is the last part of the URL: `https://peertube.wtf/w/VIDEO-ID`
 
 ### Other platforms considered
 | Platform | Type | Cost | Notes |

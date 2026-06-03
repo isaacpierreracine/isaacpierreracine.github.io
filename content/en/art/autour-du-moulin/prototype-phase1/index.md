@@ -27,13 +27,6 @@ In parallel and as my findings accumulated I created other non-functional compos
 
 The video medium allows for a better appreciation of the kinetic nature of the studies carried out using the energy of the passing train — the wind it creates and the vibrations it produces. I then experimented with transferring this energy into electrical current and activating visualization artifacts.
 
-{{< peertube id="ny9YMRqRjfcgLosiXjjzGp" img="image149.jpg" >}}
-{{< peertube id="3zA3guizXY2ZdiVRJA4urN" img="image151.jpg" >}}
-{{< peertube id="7iZzhRLG71sC9EV92g41rN" img="image157.jpg" >}}
-{{< peertube id="2JXcZZYapwLj492vXgqxpb" img="image141.jpg" >}}
-{{< peertube id="cY3ZZ9gAz9rqeYdkCbx3og" img="image152.jpg" >}}
-{{< peertube id="cWKwBVuFH5sUGQkeqetH6o" img="image153.jpg" >}}
-{{< peertube id="upNR7GgHpz8ZogPhPD54m6" img="image138.jpg" >}}
-{{< peertube id="xjh5yU97jQJAe56t7sk98N" img="image02.jpg" >}}
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">{{< peertube id="ny9YMRqRjfcgLosiXjjzGp" img="image149.jpg" >}}{{< peertube id="3zA3guizXY2ZdiVRJA4urN" img="image151.jpg" >}}{{< peertube id="7iZzhRLG71sC9EV92g41rN" img="image157.jpg" >}}{{< peertube id="2JXcZZYapwLj492vXgqxpb" img="image141.jpg" >}}{{< peertube id="cY3ZZ9gAz9rqeYdkCbx3og" img="image152.jpg" >}}{{< peertube id="cWKwBVuFH5sUGQkeqetH6o" img="image153.jpg" >}}{{< peertube id="upNR7GgHpz8ZogPhPD54m6" img="image138.jpg" >}}{{< peertube id="xjh5yU97jQJAe56t7sk98N" img="image02.jpg" >}}</div>
 
 {{< peertube id="kEErejESC93wwMy4VejYtm" full="true" >}}
