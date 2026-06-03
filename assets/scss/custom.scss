@@ -885,3 +885,12 @@ body > #dark-mode-toggle {
 .article-content p {
     overflow: hidden;
 }
+
+// ------------------------------------------------------------------
+// 23. Video thumbnails — smaller play button on mobile
+// ------------------------------------------------------------------
+@media (max-width: 640px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
