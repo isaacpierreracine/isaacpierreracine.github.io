@@ -11,7 +11,7 @@ Starting from found materials I created a series of artifacts to explore the cap
 
 I fabricated several "artifacts" that interact with wind energy and place technical and functional materiality in the foreground to suggest the experience of energy and make it tangible.
 
-![simulation bench and low-voltage mini wind generator (between 1.5 and 6v) for an interactive wind energy visualization application.](image138.jpg)![](image138.1.jpg)
+![simulation bench and low-voltage mini wind generator (between 1.5 and 6v) for an interactive wind energy visualization application.](image138.1.jpg)
 
 ![controlled wind generator to study the creation of optical effects.](image137.1.jpg)
 
@@ -29,4 +29,4 @@ The video medium allows for a better appreciation of the kinetic nature of the s
 
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">{{< peertube id="ny9YMRqRjfcgLosiXjjzGp" img="image149.jpg" >}}{{< peertube id="3zA3guizXY2ZdiVRJA4urN" img="image151.jpg" >}}{{< peertube id="7iZzhRLG71sC9EV92g41rN" img="image157.jpg" >}}{{< peertube id="2JXcZZYapwLj492vXgqxpb" img="image141.jpg" >}}{{< peertube id="cY3ZZ9gAz9rqeYdkCbx3og" img="image152.jpg" >}}{{< peertube id="cWKwBVuFH5sUGQkeqetH6o" img="image153.jpg" >}}{{< peertube id="upNR7GgHpz8ZogPhPD54m6" img="image138.jpg" >}}{{< peertube id="xjh5yU97jQJAe56t7sk98N" img="image02.jpg" >}}</div>
 
-{{< peertube id="kEErejESC93wwMy4VejYtm" full="true" >}}
+{{< peertube id="w/tdvL7R8AQhXfFSfkumnUfR" full="true" >}}

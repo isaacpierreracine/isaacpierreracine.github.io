@@ -9,7 +9,7 @@ Ese proyecto de investigación consiste en crear la maqueta de una escultura cin
 
 Partiendo de materiales encontrados creé una serie de artefactos que permiten explorar la captura y visualización de fuentes de energía natural, principalmente del viento. Ensamblé elementos que me permitieran simular el viento con el fin de obtener mayor autonomía en el desarrollo de las aplicaciones formales de visualización de su energia. Fabriqué algunos "artefactos" que interactúan con la energía eólica y sitúan la materialidad técnica y funcional en primer plano con el objectivo de hacerla tangible.
 
-![banco de simulación y mini generador eólico de bajo voltaje (entre 1.5 y 6v) para una aplicación interactiva de visualización de la energía del viento.](image138.jpg)![](image138.1.jpg)
+![banco de simulación y mini generador eólico de bajo voltaje (entre 1.5 y 6v) para una aplicación interactiva de visualización de la energía del viento.](image138.1.jpg)
 
 ![generador de viento controlado para estudiar la creación de efectos ópticos.](image137.1.jpg)
 
@@ -27,4 +27,4 @@ El medio video permite apreciar mejor la naturaleza cinética de los estudios re
 
 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">{{< peertube id="ny9YMRqRjfcgLosiXjjzGp" img="image149.jpg" >}}{{< peertube id="3zA3guizXY2ZdiVRJA4urN" img="image151.jpg" >}}{{< peertube id="7iZzhRLG71sC9EV92g41rN" img="image157.jpg" >}}{{< peertube id="2JXcZZYapwLj492vXgqxpb" img="image141.jpg" >}}{{< peertube id="cY3ZZ9gAz9rqeYdkCbx3og" img="image152.jpg" >}}{{< peertube id="cWKwBVuFH5sUGQkeqetH6o" img="image153.jpg" >}}{{< peertube id="upNR7GgHpz8ZogPhPD54m6" img="image138.jpg" >}}{{< peertube id="xjh5yU97jQJAe56t7sk98N" img="image02.jpg" >}}</div>
 
-{{< peertube id="kEErejESC93wwMy4VejYtm" full="true" >}}
+{{< peertube id="w/tdvL7R8AQhXfFSfkumnUfR" full="true" >}}
