@@ -8,3 +8,5 @@ draft: false
 Une compilation des domaines de connaissances que le projet explore. La maîtrise des concepts est mon objectif principal et les liens compilés sont avant tout explicatif et souvent didactique.  
 
 - [The ray diagram](https://www.youtube.com/watch?v=dBOzdoIsOEI)
+- [Roman Zigner](https://romansigner.ch/)
+- [Pinaffo et Pluvinage](https://pinaffo-pluvinage.com/)
