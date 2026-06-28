@@ -78,6 +78,9 @@ languages:
           weight: 4
         - name: À propos
           url: /fr/about/
+          weight: 6
+        - name: Cinéma
+          url: /fr/cinema/
           weight: 5
 
   en:
@@ -103,9 +106,12 @@ languages:
         - name: Useful links
           url: /en/references/
           weight: 4
+        - name: Cinema
+          url: /en/cinema/
+          weight: 5
         - name: About
           url: /en/about/
-          weight: 5
+          weight: 6
 
   es:
     languageName: "Español"
@@ -130,12 +136,14 @@ languages:
         - name: Enlaces utiles
           url: /es/references/
           weight: 4
+        - name: Cine
+          url: /es/cinema/
+          weight: 5
         - name: Acerca de
           url: /es/about/
-          weight: 5
+          weight: 6
 
 markup:
   goldmark:
     renderer:
       unsafe: true
-

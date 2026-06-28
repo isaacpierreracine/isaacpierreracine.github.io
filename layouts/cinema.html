@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="references-section">
+    <div class="section-header">
+        <h1 class="section-title">{{ .Title }}</h1>
+    </div>
+    <div class="ref-list" id="ref-list">
+        {{- range .Pages.ByWeight }}
+        <div class="ref-item">
+            <div class="ref-item-main">
+                {{- if .Params.url_externe }}
+                <a
+                    class="ref-title ref-title--link"
+                    href="{{ .Params.url_externe }}"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    {{ .Title }}
+                    <svg
+                        class="ref-ext-icon"
+                        width="10"
+                        height="10"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                    >
+                        <path
+                            d="M2 10L10 2M10 2H5M10 2V7"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </a>
+                {{- else }}
+                <a class="ref-title ref-title--link" href="{{ .RelPermalink }}"
+                    >{{ .Title }}</a
+                >
+                {{- end }} {{- with .Params.note }}
+                <p class="ref-note">{{ . }}</p>
+                {{- end }}
+            </div>
+            <div class="ref-item-meta">
+                {{- range .Params.tags }}
+                <span class="ref-item-tag">{{ . }}</span>
+                {{- end }}
+            </div>
+        </div>
+        {{- end }}
+    </div>
+</div>
+{{- partialCached "footer/footer" . -}} {{ end }}
