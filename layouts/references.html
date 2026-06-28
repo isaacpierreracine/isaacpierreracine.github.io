@@ -30,7 +30,7 @@
                     </svg>
                 </a>
                 {{- else }}
-                <span class="ref-title">{{ .Title }}</span>
+                <a class="ref-title ref-title--link" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 {{- end }}
                 {{- with .Params.note }}
                 <p class="ref-note">{{ . }}</p>
