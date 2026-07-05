@@ -15,7 +15,7 @@ Dans un premier temps j'ai crée une mini-éolienne muni des deux petits moteurs
 
 ![Support et emplacement ](image11.jpg). 
 
-Le fait de de travailler d'une part avec le vent qui souffle quand bon lui semble et d'autre part avec un train qui passe sans ponctualité pendant quelques minutes et seulement quelque fois par jour est rapidement devenu un handicap pour le développement de mes apprentissages. J'ai donc compris qu'il était nécessaire de pouvoir simuler le vent.  J'ai crée un socle me permettant d'activer mon éolienne à l'aide d'un ventilateur que j'ai muni muni d'une pédale de régulation de vitesse.
+Le fait de de travailler d'une part avec le vent qui souffle quand bon lui semble et d'autre part avec un train qui passe sans ponctualité pendant quelques minutes et seulement quelque fois par jour est rapidement devenu un handicap pour le développement de mes apprentissages. J'ai donc compris qu'il était nécessaire de pouvoir simuler le vent. J'ai crée un socle me permettant d'activer mon éolienne à l'aide d'un ventilateur que j'ai muni muni d'une pédale de régulation de vitesse.
 (photos et vidéos)
 
 Par la suite j'ai éliminé le deuxième moteur (un suffit pour le moment) et crée une structure de soutient de 3 stylos auquel j'ai rattaché un mini motuer vibratoire alimenté par l'éolienne. Lorsque le vent souffle l'hélice s'active, entraîne le moteur qui génère un courant électrique qui produit un vibration transmise au stylos qui se mettent à dessiner le vent.  
