@@ -1,7 +1,7 @@
 ---
 title: "Prototype - phase 2"
 date: 2026-07-02
-image:
+image: image2000.jpg
 draft: false
 ---
 Avec cette deuxième phase du travail d'exploration et de prototypage j'ai créé une série d'objets/artefacts qui cherchent à mettre en équilibre forme et fonctionalité tout en explorant différents applicatioons cinétiques de l'énergie solaire et éolienne. Le travail s'est effectué de façon très intuitive, au fur et à mesure des matériaux trouvés lors de mes visites quotidiennes à l'éco-centre, chaque élément a pris forme et la relation complémentaire entre chacun s'est révélée progressivement.  
@@ -12,8 +12,9 @@ Paralèllement, j'ai aussi crée une première proposition de sculpture en versi
 
 Utilisant la roue de vélo comme leitmotif visuel, j'ai expérimenté avec la répétition et superposition d'éléments graphiques en mouvement pour étudier le potentiel de création d'effets optiques. Chacune des roues est accrochées à un trépied et décoré avec des combinaisons de cartons blancs et noirs.  
 
-![Roue 1](image245.jpg)![Roue 2](image246.jpg)![Roue 3](image248.jpg)![Roue 4](image249.jpg)![Roue 5](image250.jpg)![Roue 6](image247.jpg) 
+![Combinaison 1](image244.jpg)  
 
+![Roue 1](image245.jpg)![Roue 2](image246.jpg)![Roue 3](image248.jpg)![Roue 4](image249.jpg)![Roue 5](image250.jpg)![Roue 6](image247.jpg)  
 
 Les cartons sur les rayons a été très laborieux. J'ai fabriqué des petites agrafes en impression 3D pour soutenir les cartons sur les rayons.  
 
@@ -21,7 +22,7 @@ Les cartons sur les rayons a été très laborieux. J'ai fabriqué des petites a
 
 Avec cet exercise j'établit l'idée de possibilités infinies qui s'offrent en combinant des motifs de différentes tonalités, couleurs et formes.  
 
-![Combinaison 1](image244.jpg)![Combinaison 2](image243.jpg)  
+![Combinaison 1](image243.jpg)![Combinaison 2](image233.jpg)  
 
 [Document CAD de l'agrafe](byciclewheelclip.stl)
 
@@ -31,7 +32,7 @@ J'ai crée une application horizontal de capture d'énergie éolienne. Cette app
 
 La sculpture est composée principalement de matériaux recyclés. Un vieux socles d'acier et une vielle en fonte, une roue de chariot pour enfants, une grille de ventilateur, des tiges de balise, des flottes de toilettes et des roulements à bille. . Pour l'assemblage j'ai fabriqué des attaches imprimé en 3D pour soutenir les capteurs de vent.  
 
-![Éolienne horizontale 2](image217.4.jpg)![Éolienne horizontale 3](image217.3.jpg)![Attaches](image217.2.jpg)![Détails fabrication](image217.1.jpg)  
+![Éolienne horizontale 3](image217.3.jpg)![Attaches](image217.2.jpg)![Détails fabrication](image217.1.jpg)  
 
 Cette pièce représente une première esquisse très sommaire d'intégration du principe èolien horizontal et son application cinétique. Il est facile d'imaginer cette sculture projeté sur une échelle monumentale et auquelle pourrait se greffer un système de capture de l'énergie mécanique et sa transformation en courant électrique.   
 

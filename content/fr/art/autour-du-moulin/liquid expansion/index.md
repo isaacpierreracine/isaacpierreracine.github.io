@@ -1,11 +1,11 @@
 ---
 title: "Expansion du liquide"
 date: 2026-07-02
-image:
 draft: false
+image: image147.jpg
 ---
 
-# Solar Kinetic Sculpture — Project SoulGem
+#### Solar-kinetic-sculpture# Solar Kinetic Sculpture — Project SoulGem
 *Session notes for continuity — upload this at the start of a new session*
 
 ---
