@@ -9,7 +9,7 @@ draft: false
 
 ![micromacro](image132.jpg)  
 
-Le processus de recherche et d'exploration ainsi que la création m'a permis de réfléchir à différentes formes d'intégration des principes fondamentaux de la sculpture. J'ai dévelopé quelques proposition à la fois différentes et complémentaires partagé entre l'idée de donner un caractère monumental à la sculpture soit par l'usage d'un élémnet principal surdimensionné ou par la répétition d'une même élément sur des échelles différentes. Ces deux tendances sont explicites dans les différentes esquisses que j'ai produit Mon expérimentation est conditionné par à la question essentielle de la résilience. Quelle serait la forme idéale d'une sculpture cinétique énergétiquement autonome qui requiert le minimum d'entretien et de maintenance possible? 
+Le processus de recherche et d'exploration ainsi que la création des prototypes m'a amené à réfléchir sur différentes formes d'intégration des principes fondamentaux de la sculpture: équilibre, fonctionalité et autonomie. J'ai dévelopé quelques propositions à la fois distinctes et complémentaires, partagé entre l'idée de donner un caractère monumental à la sculpture par l'usage d'un élémnet principal surdimensionné ou par la répétition d'une même élément dans des proportions différentes. Ces deux tendances sont explicites dans les différentes esquisses que j'ai produit. Le choix s'efectuera lors de la prochaine étape et en considération avec le besoin d'assurer la résileince maximale de la sculpture finale. 
 
 Avec la création des des premières esquisses j'ai cherché à mettre en relation les forces opposées (le grand et le petit, mouvement et la quiétude, la lourdeur et la légèreté, la fonctionalité et l'esthétique) tout en imaginant des matériaux dont la symbolique cherche à placer le passé et le présent dans un même espace. 
 
@@ -30,7 +30,8 @@ Avec toutes ces idées en tête je me suis mis à dessiner en m'inspirant de mat
 
 #### Mobile  
 
-![Esquisse 11](image402.jpg)
+![Esquisse 11](image402.jpg)  
+
 ![Esquisse 12](image404.jpg)![Esquisse 13](image405.jpg)  
 
 #### Esquisse tridimensionelles  
