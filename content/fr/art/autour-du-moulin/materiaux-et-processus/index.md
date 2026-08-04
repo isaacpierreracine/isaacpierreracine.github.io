@@ -40,6 +40,40 @@ Une amie m'a aussi donné de vieux trépieds que j'ai apprécié car il m'est tr
 
 <img src="image02.jpg" alt="étude cinétique" style="width: 75%;">  
 
-J'ai effectué une session photographique pour travailler sur les proportions, la relation d'objets symbolique d'échelle différente. Une premier essai d'approche à cette dimension que je veux explorer avec la présentation du résultat de ma recherche en septembre 2026.  
+J'ai développé la routine de viviter l'éco-centre de St-Pascal presque quotidiennement pendant plusieurs semaines lors des deux phases de recherche et d'exploration. Cela m'a permis de débusquer des objets usagé de différentes envergures afin de travailler les différentes dimensions du projet tout en m"offrant la matière pour développer les prototypes.  
 
-![](image01.jpg)![](image02.jpg)![](image131.jpg)![](image132.jpg)![](image133.jpg)![](image134.jpg)
+Parralèllement j'ai ouverts mes recherches à des ferrailleurs de la reégion et d'autres éco-centres. Celui de St-Alexandre tient en inventaire lusieurs éléments intéressants qui nosu rapproche de la dimension réelle de la sculpture. Une autre source intéressante est un ferrailleur de Rivière Ouelle qui possède plusieurs éléments structurels intéressants.  
+
+![Riv. Ouelle 2](image302.jpg)![Riv. Ouelle 4](image304.jpg)![St-Alexandre 1](image309.jpg)![Riv. Ouelle 6](image306.jpg)![Riv. Ouelle 7](image307.jpg)![Riv. Ouelle 8](image308.jpg)  
+
+
+![St-Alexandre 2](image310.jpg)![Riv. Ouelle 5](image305.jpg) 
+
+
+![Stade 1](image311.jpg)![Stade 2](image312.jpg)![Stade 3](image313.jpg)  
+
+![Stade 4](image314.jpg)![Stade 5](image315.jpg)![Stade 6](image316.jpg)  
+
+![Stade 7](image317.jpg)![Stade 8](image318.jpg)![Stade 9](image319.jpg)![Éco centre St-Alex](image322.jpg)  
+
+![Ferme Zoe](image337.jpg)![Ferme Zoe](image338.jpg)![Ferme Zoe](image341.jpg)  
+![Ferme Rang des côtes](image342.jpg)  
+![Camille](image346.jpg)![Camille](image347.jpg)![Camille](image348.jpg)![Camille](image349.jpg)  
+![Camille](image350.jpg)![Camille](image351.jpg)![Camille](image352.jpg)![Camille](image353.jpg)  
+![Camille](image354.jpg)![Camille](image355.jpg)![Camille](image356.jpg)![Camille](image357.jpg)![Camille](image344.jpg)
+
+Matériaux références  
+
+ ![Ref.](image324.jpg) ![Ref.](image325.jpg) ![Ref.](image327.jpg) ![Ref.](image328.jpg) ![Ref.](image330.jpg) 
+
+ ![Ref. motif répété](image323.jpg)![Ref. Structure](image320.jpg)  
+ 
+  ![Vollis Simpson1](image331.jpg)![Vollis Simpson2](image332.jpg)![Vollis Simpson3](image333.jpg)![Vollis Simpson4](image334.jpg)![Vollis Simpson5](image335.jpg)![Vollis Simpson6](image336.jpg) 
+  
+ <img src="image329.jpg" style="width: 50%;">  
+     
+[Vollis Simpson](https://spacesarchives.org/explore/search-the-online-collection/whirligig-park/)
+
+Éolienne existante dans la région.
+
+![st-germain](image300.jpg)![Kamouraska](image301.jpg)

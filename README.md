@@ -1,6 +1,6 @@
 # isaacpierreracine.github.io — Site Construction Reference
 
-Last updated: June 3, 2026
+Last updated: June 28, 2026
 
 > **Note for Claude:** Always confirm with Isaac that this is the latest README before making any updates.
 
@@ -47,7 +47,8 @@ Last updated: June 3, 2026
 │   ├── home.html                         ← homepage with hero
 │   ├── art.html                          ← Art section — 3 project cards
 │   ├── autour-du-moulin.html             ← Autour du Moulin entry list
-│   ├── references.html                   ← Liens utiles — tag-filtered list
+│   ├── references.html                   ← Liens utiles — tag-filtered list with layout: "references"
+│   ├── cinema.html                       ← Cinéma section — weight-sorted link list ← added June 28 2026
 │   ├── shortcodes/
 │   │   └── peertube.html                 ← PeerTube video shortcode — added June 3 2026
 │   ├── page/
@@ -64,7 +65,8 @@ Last updated: June 3, 2026
     │   ├── about/index.md
     │   ├── archives/index.md
     │   ├── search/index.md               ← page bundle (not flat .md file)
-    │   ├── references/_index.md
+    │   ├── references/_index.md          ← layout: "references"
+    │   ├── cinema/_index.md              ← added June 28 2026, layout: "cinema"
     │   └── art/
     │       ├── _index.md
     │       ├── autour-du-moulin/
@@ -82,14 +84,16 @@ Last updated: June 3, 2026
     │       ├── perpetuelle/index.md
     │       └── recherche-et-experimentation/index.md
     ├── en/                               ← mirrors fr/ structure
-    │   ├── about/index.md                ← added May 7 2026
-    │   ├── archives/index.md             ← added May 14 2026
+    │   ├── about/index.md
+    │   ├── archives/index.md
     │   ├── references/_index.md
+    │   ├── cinema/_index.md              ← added June 28 2026
     │   └── search/index.md
     └── es/                               ← mirrors fr/ structure
-        ├── about/index.md                ← added May 7 2026
-        ├── archives/index.md             ← added May 14 2026
+        ├── about/index.md
+        ├── archives/index.md
         ├── references/_index.md
+        ├── cinema/_index.md              ← added June 28 2026
         └── search/index.md
 ```
 
@@ -110,7 +114,10 @@ Homepage — shows site title, tagline (from `params.sidebar.subtitle`), hero im
 Entry list sorted newest first. Shows title, italic date, thumbnail on right. Has back link to Art.
 
 ### references.html
-Liens utiles page. Auto-collects tags from all entries. Client-side tag filter. Supports `url_externe` for external links.
+Liens utiles page. Auto-collects tags from all entries. Client-side tag filter. Supports `url_externe` for external links. Used with `layout: "references"` in `_index.md`.
+
+### cinema.html — added June 28 2026
+Cinéma section. Simple list sorted by `weight`. Supports `url_externe` for external links. Tags shown as labels on right. Used with `layout: "cinema"` in `_index.md`.
 
 ### shortcodes/peertube.html
 PeerTube video shortcode — see section 17 for usage.
@@ -168,13 +175,13 @@ markup:                                         # added May 14 2026
 languages:
   fr:
     contentDir: "content/fr"
-    menu: Accueil, Art, Archive, Liens utiles, À propos
+    menu: Accueil, Art, Archive, Liens utiles, Cinéma, À propos  # Cinéma added June 28 2026
   en:
     contentDir: "content/en"
-    menu: Home, Art, Archive, Useful links, About
+    menu: Home, Art, Archive, Useful links, Cinema, About
   es:
     contentDir: "content/es"
-    menu: Inicio, Arte, Archivo, Enlaces útiles, Acerca de
+    menu: Inicio, Arte, Archivo, Enlaces útiles, Cine, Acerca de
 ```
 
 ---
@@ -195,7 +202,7 @@ draft: false
 ---
 ```
 
-### Archives page (archives/index.md) — all languages — added May 14 2026
+### Archives page (archives/index.md) — all languages
 ```yaml
 ---
 title: "Archive"            # or Archive / Archivo
@@ -210,6 +217,40 @@ draft: false
 ---
 title: "Liens utiles"       # or Useful links / Enlaces útiles
 layout: "references"
+draft: false
+---
+```
+
+### Cinéma index (cinema/_index.md) — added June 28 2026
+```yaml
+---
+title: "Cinéma"             # or Cinema / Cine
+layout: "cinema"
+draft: false
+---
+```
+
+### Cinéma entry (.md file) — added June 28 2026
+```yaml
+---
+title: "Entry title"
+date: 2026-06-28
+weight: 1                   # controls display order — lower = first
+url_externe: "https://..."  # external link
+tags: ["Category name"]     # shown as label on right
+draft: false
+---
+```
+
+### References entry (.md file)
+```yaml
+---
+title: "Title"
+date: 2026-01-15
+tags: ["tag1", "tag2"]
+url_externe: "https://..."
+note: "Short annotation"
+draft: false
 ---
 ```
 
@@ -244,18 +285,6 @@ title: "Entry Title"
 date: 2026-03-15
 draft: false
 image: cover.jpg              # thumbnail in list
----
-```
-
-### Liens utiles entry (.md file)
-```yaml
----
-title: "Title"
-date: 2026-01-15
-tags: ["tag1", "tag2"]
-url_externe: "https://..."
-note: "Short annotation"
-draft: false
 ---
 ```
 
@@ -304,7 +333,7 @@ for f in ~/Documents/hugo/img/*.jpeg; do
   magick "$f" -resize 800x -quality 75 ~/Documents/hugo/img/lowres/"$(basename "${f%.jpeg}").jpg"
 done
 
-# Batch convert .png to .jpg with low res output — added May 14 2026
+# Batch convert .png to .jpg with low res output
 mkdir -p ~/Documents/hugo/img/lowres
 for f in ~/Documents/hugo/img/*.png; do
   magick "$f" -resize 800x -quality 75 ~/Documents/hugo/img/lowres/"$(basename "${f%.png}").jpg"
@@ -317,7 +346,7 @@ cd ~/Documents/hugo/stack/content/fr/art/autour-du-moulin/entry-name && ls *.jpg
 ls -lh path/to/image.jpg
 ```
 
-Note: images from camera are often `.jpeg`, `.JPG` or `.heic` — adjust extension in the batch command accordingly. iPhone HEIC files can be batch converted with magick directly.
+Note: images from camera are often `.jpeg`, `.JPG` or `.heic` — adjust extension in the batch command accordingly.
 
 ### Images with gallery layout
 Stack automatically applies a flex gallery layout to inline images (no spaces between them):
@@ -326,7 +355,7 @@ Stack automatically applies a flex gallery layout to inline images (no spaces be
 ```
 Images must be in the **same folder** as the `index.md` for the gallery layout to work. If images are shared across languages, copy them to each language folder.
 
-### Sizing images in markdown — added May 14 2026
+### Sizing images in markdown
 With `markup.goldmark.renderer.unsafe: true` in config.yaml, use HTML directly in markdown:
 
 ```html
@@ -364,12 +393,13 @@ GitHub Actions auto-deploys on every push to main.
 |---|---|---|---|---|
 | Homepage | ✓ | ✓ | ✓ | Hero image from static/ |
 | Art — 3 cards | ✓ | ✓ | ✓ | Sorted by weight — 2 per row |
-| Autour du Moulin | ✓ | ✓ | ✓ | 9 entries: le-projet, echeancier, atelier, materiaux-et-processus, energie-du-train, recherche, page-web, liensderecherche, prototype-phase1, mediation_1 |
+| Autour du Moulin | ✓ | ✓ | ✓ | 9 entries |
 | Perpetuelle | ✓ | ✓ | ✓ | External link |
 | Recherche et expérimentation | ✓ | ✓ | ✓ | Single page |
 | Archive | ✓ | ✓ | ✓ | EN/ES added May 14 2026 |
-| Liens utiles | ✓ | ✓ | ✓ | EN/ES added May 2026 |
-| À propos | ✓ | ✓ | ✓ | Full CV — FR corrected May 2026 |
+| Liens utiles | ✓ | ✓ | ✓ | EN/ES added May 2026 — layout: "references" |
+| Cinéma | ✓ | ✓ | ✓ | Added June 28 2026 — 9 entries, layout: "cinema" |
+| À propos | ✓ | ✓ | ✓ | Full CV |
 | Search | ✓ | ✓ | ✓ | EN/ES added May 2026 |
 
 ---
@@ -383,11 +413,12 @@ GitHub Actions auto-deploys on every push to main.
 - [x] Back arrow navigation — consistent across all pages via baseof.html
 - [x] Light mode text visibility fix
 - [x] Date format — no day name
-- [x] Video embedding — PeerTube account created on peertube.wtf (see section 17)
+- [x] Video embedding — PeerTube account created on peertube.wtf
 - [x] Art cards — 2 per row, white text on dark card body
+- [x] Cinéma section FR/EN/ES
+- [x] Liens utiles — artist residencies reference file added
 - [ ] Auto-translation via Anthropic API (API key setup pending)
-- [ ] Self-hosting migration (Phase 2)
-- [ ] Migrate PeerTube to self-hosted instance in Phase 2
+- [ ] Self-hosting migration (Phase 2) — including self-hosted PeerTube
 - [ ] Giscus comments re-enable when self-hosting
 
 ---
@@ -408,6 +439,7 @@ New layouts (no theme equivalent):
 - `layouts/art.html`
 - `layouts/autour-du-moulin.html`
 - `layouts/references.html`
+- `layouts/cinema.html`
 - `layouts/_default/index.json`
 - `layouts/_partials/topnav.html`
 - `layouts/shortcodes/peertube.html`
@@ -447,6 +479,7 @@ xattr -rc ~/Documents/hugo/stack/content # fix VS Code permission errors
 git add . && git commit -m "msg" && git push  # commit and deploy
 cd ..                                     # go back one directory in terminal
 code .                                    # open current folder in VS Code
+open -a Zed ~/Documents/hugo/stack       # open in Zed editor
 ```
 
 ## 15. Known Gotchas
@@ -463,7 +496,12 @@ code .                                    # open current folder in VS Code
 - **Gallery images must be local** — Stack's flex gallery layout only works when images are in the same folder as `index.md`. Absolute paths or static folder paths will not trigger the gallery CSS.
 - **Language tabs require matching folder names** — if folder names differ across languages, add `translationKey: "keyname"` to front matter of all three files. Easiest to just keep the same folder name in all languages.
 - **Future-dated entries won't show** — Hugo hides entries with a future date by default. Use `hugo server -D -F` locally to see them. They go live automatically on the live site once their date arrives.
-- **VS Code empty folder** — if VS Code shows empty project, run `rm -rf ~/Library/Application\ Support/Code/User/workspaceStorage` then `code ~/Documents/hugo/stack`. Also add `"security.workspace.trust.enabled": false` to VS Code user settings to prevent recurring issue.
+- **VS Code empty folder** — recurring permission issue. Try `open -a Zed ~/Documents/hugo/stack` instead. VS Code fix: `rm -rf ~/Library/Application\ Support/Code/User/workspaceStorage` then reopen.
+- **Section layout for root sections** — Hugo ignores `layout:` in `_index.md` for root sections when using the default language. Fix: create `layouts/SECTIONNAME.html` and reference it with `layout: "SECTIONNAME"`. The layout file name must match what's in `_index.md`.
+- **References/Cinema entries need `tags: []`** if no tags are set — otherwise `references.html` layout throws a nil error on `delimit .Params.tags`.
+- **Cinema entries use `weight:` for ordering** — use `.Pages.ByWeight` in the layout. Add `weight: N` to each entry's front matter. Entries without weight appear last.
+- **`&` in URLs breaks heredoc** — when creating files with `cat > file << 'EOF'`, URLs containing `&` (e.g. YouTube URLs with `&t=3s`) will break the command. Use `printf` instead: `printf -- '---\nurl_externe: "URL"\n---\n' > file.md`
+- **EN/ES section index files must be `_index.md` not `index.md`** — using `index.md` causes Hugo to treat it as a regular page, breaking the section layout for all languages including FR.
 
 ---
 
@@ -493,6 +531,7 @@ code .                                    # open current folder in VS Code
 | 20 | Art card body — force white text in light mode | June 3 2026 |
 | 21 | Video grid — matches image gallery width | June 3 2026 |
 | 22 | Gallery — contain images within content margins | June 3 2026 |
+| 23 | Mobile play button size reduction | June 3 2026 |
 
 ### Section 16 — Light mode readable text colors
 ```scss
@@ -564,6 +603,8 @@ code .                                    # open current folder in VS Code
 
 PeerTube is open source, federated (Fediverse), no ads, no algorithm. Plan to migrate to self-hosted PeerTube instance in Phase 2.
 
+**Note June 28 2026:** peertube.wtf experienced instability likely related to a SQL injection vulnerability exploited across PeerTube instances since May 18, 2026. Videos may be intermittently unavailable. Self-hosting planned for Phase 2.
+
 ### PeerTube shortcode
 File: `layouts/shortcodes/peertube.html`
 
@@ -596,3 +637,45 @@ File: `layouts/shortcodes/peertube.html`
 | Internet Archive | Hosted | Free | Open, no ads, permanent storage |
 | Bunny Stream | Hosted indie | ~$10/mo | No tracking, clean embeds |
 | Cloudflare Stream | Hosted | ~$5/mo | Fast, simple embed |
+
+---
+
+## 18. Cinéma Section — June 28 2026
+
+New section added to the main navigation alongside Art, Archive, Liens utiles, À propos.
+
+**Layout:** `layouts/cinema.html` — simple list sorted by `weight`, external links with tag labels.
+
+**_index.md front matter:**
+```yaml
+---
+title: "Cinéma"    # or Cinema / Cine
+layout: "cinema"
+draft: false
+---
+```
+
+**Entry front matter:**
+```yaml
+---
+title: "TROYA (court-métrage fiction, 14 min., vidéo)"
+date: 2026-06-28
+weight: 1
+url_externe: "https://peertube.wtf/w/VIDEO-ID"
+tags: ["Producteur et réalisateur"]
+draft: false
+---
+```
+
+**Current entries (FR) in weight order:**
+1. TROYA — Producteur et réalisateur
+2. Don the Stain — Producteur et réalisateur
+3. Aro Tolbukhin — Trailer
+4. Heavens — Co-réalisation
+5. Felix et Nati — Co-réalisateur
+6. Croix de Chemin — Co-réalisation
+7. Dieu fait la fête — Réalisateur et producteur
+8. Art director films — Art director films (showreel link)
+9. Art director commercial — Art director commercial (showreel link)
+
+**Important:** URLs with `&` (e.g. YouTube) must be created with `printf` not heredoc — see gotchas section 15.

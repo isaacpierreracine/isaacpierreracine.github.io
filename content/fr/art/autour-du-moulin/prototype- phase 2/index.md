@@ -23,16 +23,24 @@ La pose des cartons sur les rayons a été très laborieuse. J'ai fabriqué de p
 Avec cet exercice, j'établis l'idée de possibilités infinies qui s'offrent en combinant des motifs de différentes tonalités, couleurs et formes.
 
 ![Combinaison 1](image243.jpg)![Combinaison 2](image233.jpg)
+  
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">{{< peertube id="mjgE5vHunHEztLaUP5GP4X" img="image254.jpg" >}}{{< peertube id="sij2pFG58qzt4JfhWdjU9r" img="image255.jpg" >}}{{< peertube id="sF3Jsc6Crj53aaosctwgy2" img="image256.jpg" >}}{{< peertube id="r4k2JcerWiw3x1JvKsdwRi" img="image257.jpg" >}} </div>  
 
-[Document CAD de l'agrafe](byciclewheelclip.stl)
+{{< peertube id="w/hkYNiYhT4VGSfYU2rXZvQh" full="true" >}}  
 
-### Le principe éolien horizontal
+[Document CAD de l'agrafe](byciclewheelclip.stl)  
+
+
+### Le principe éolien horizontal  
+
 J'ai créé une application horizontale de capture d'énergie éolienne. Cette approche minimise l'impact de la gravité en appuyant le poids des composants en mouvement sur un point de rotation horizontal. Avec cette approche, la friction sur l'axe est minimisée en comparaison à l'application verticale et permet une visualisation du vent de très faible intensité.
 ![Éolienne horizontale 1](image217.5.jpg)
 
 La sculpture est composée principalement de matériaux recyclés : un vieux socle d'acier et une vieille pièce en fonte, une roue de chariot pour enfants, une grille de ventilateur, des tiges de balise, des flotteurs de toilettes et des roulements à bille. Pour l'assemblage, j'ai fabriqué des attaches imprimées en 3D pour soutenir les capteurs de vent.
 
 ![Éolienne horizontale 3](image217.3.jpg)![Attaches](image217.2.jpg)![Détails fabrication](image217.1.jpg)
+
+{{< peertube id="w/fyjPYSKMuuzdiTES3iEXrj" full="true" >}}  
 
 Cette pièce représente une première esquisse très sommaire de l'intégration du principe éolien horizontal et de son application cinétique. Il est facile d'imaginer cette sculpture projetée à une échelle monumentale, à laquelle pourrait se greffer un système de capture de l'énergie mécanique et sa transformation en courant électrique.
 
@@ -46,7 +54,9 @@ J'ai récupéré un élément instauré l'an dernier dans mon installation « la
 
 Cette proposition met en interaction les énergies naturelles de la gravité et du vent. Elle pose des défis physiques de grande importance qu'il faudra traiter dans une prochaine étape, dans un milieu naturel et en interaction avec les éléments réels. Les exercices de simulation effectués en atelier sont prometteurs.
 
-![Détail 1](image211.2.jpg)![Détail 2](image212.1.jpg)![Détail 3](image211.4.jpg)
+![Détail 1](image211.2.jpg)![Détail 2](image212.1.jpg)![Détail 3](image211.4.jpg)  
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">{{< peertube id="3zzpNPefLRR55cVPjqMBbo" img="image260.jpg" >}}{{< peertube id="gi3y2EiVtZDx9xcpeVK63B" img="image263.jpg" >}}{{< peertube id="nbrYrb48D1iANKiBs1zE56" img="image262.jpg" >}}{{< peertube id="2n7bLVVNPUuGov9mUfCTiw" img="image261.jpg" >}}</div>  
 
 ### La complémentarité des formes et le bruit de leur interaction.
 
