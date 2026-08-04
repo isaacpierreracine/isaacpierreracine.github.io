@@ -33,7 +33,7 @@ L'objectif de cette rencontre consiste à mettre les membres des comités à jou
         - l'énergie du train      
      - recherche des matériaux
      - premières esquisses ([Esquisses et proportions](https://isaacpierreracine.github.io/fr/art/autour-du-moulin/esquisse/))
-      - différentes options et intégration des matériaux
+      - différentes options et intégration des matériaux ([Mat/riaux et processus](https://isaacpierreracine.github.io/fr/art/autour-du-moulin/materiaux-et-processus/))
       - jeu de proportion (en vue de la présentation de la maquette) 
       - période de questions, commentaires 
       - conclusion et choix de proposition
