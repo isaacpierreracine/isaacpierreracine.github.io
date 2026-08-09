@@ -18,8 +18,8 @@ Par la suite je situe le moment actuel dans le calendrier global de réalisation
 En conclusion je décrirai mes objectifs pour la prochaine étape. 
 
 L'objectif de cette rencontre consiste à mettre les membres des comités à jour sur l'évolution du projet, présenter les différentes directions que j'ai envisagé pour la sculpture et recevoir des commentaires en vue de détermniter la direction à prendre pour le développement de la proposition finale et qui donnera lieu à la réalisation de la maquette. 
-
-
+![Comité culture St-Pascal 1](image137.jpg)
+![Comité culture St-Pascal 1](image138.jpg)
 #### Retour sur le calendrier
   - mise en production du projet / recherche théorique et préparation (mars/ 15 avril)
   - protypage phase 1 ( 15 avril/8 juin)

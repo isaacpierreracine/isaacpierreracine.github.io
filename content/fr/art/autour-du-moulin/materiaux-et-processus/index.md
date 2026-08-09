@@ -44,7 +44,10 @@ J'ai développé la routine de viviter l'éco-centre de St-Pascal presque quotid
 
 Parralèllement j'ai ouverts mes recherches à des ferrailleurs de la reégion et d'autres éco-centres. Celui de St-Alexandre tient en inventaire lusieurs éléments intéressants qui nosu rapproche de la dimension réelle de la sculpture. Une autre source intéressante est un ferrailleur de Rivière Ouelle qui possède plusieurs éléments structurels intéressants.  
 
-![Riv. Ouelle 2](image302.jpg)![Riv. Ouelle 4](image304.jpg)![St-Alexandre 1](image309.jpg)![Riv. Ouelle 6](image306.jpg)![Riv. Ouelle 7](image307.jpg)![Riv. Ouelle 8](image308.jpg)  
+![Riv. Ouelle 2](image302.jpg)![Riv. Ouelle 4](image304.jpg)  
+
+![St-Alexandre 1](image309.jpg)![Riv. Ouelle 6](image306.jpg)![Riv. Ouelle 7](image307.jpg)  
+![Riv. Ouelle 8](image308.jpg)  
 
 
 ![St-Alexandre 2](image310.jpg)![Riv. Ouelle 5](image305.jpg) 
@@ -54,13 +57,16 @@ Parralèllement j'ai ouverts mes recherches à des ferrailleurs de la reégion e
 
 ![Stade 4](image314.jpg)![Stade 5](image315.jpg)![Stade 6](image316.jpg)  
 
-![Stade 7](image317.jpg)![Stade 8](image318.jpg)![Stade 9](image319.jpg)![Éco centre St-Alex](image322.jpg)  
+![Stade 7](image317.jpg)![Stade 8](image318.jpg)![Stade 9](image319.jpg)
+![Éco centre St-Alex](image322.jpg)![Ferme Zoe](image337.jpg)![Ferme Zoe](image338.jpg)  
 
-![Ferme Zoe](image337.jpg)![Ferme Zoe](image338.jpg)![Ferme Zoe](image341.jpg)  
-![Ferme Rang des côtes](image342.jpg)  
-![Camille](image346.jpg)![Camille](image347.jpg)![Camille](image348.jpg)![Camille](image349.jpg)  
-![Camille](image350.jpg)![Camille](image351.jpg)![Camille](image352.jpg)![Camille](image353.jpg)  
-![Camille](image354.jpg)![Camille](image355.jpg)![Camille](image356.jpg)![Camille](image357.jpg)![Camille](image344.jpg)
+![Ferme Zoe](image341.jpg)![Ferme Rang des côtes](image342.jpg)![Camille](image346.jpg)  
+![Camille](image347.jpg)![Camille](image348.jpg)![Camille](image349.jpg)  
+
+![Camille](image350.jpg)![Camille](image351.jpg)![Camille](image352.jpg)  
+![Camille](image353.jpg)![Camille](image354.jpg)![Camille](image355.jpg)  
+![Camille](image356.jpg)![Camille](image357.jpg)![Camille](image344.jpg)  
+
 
 Matériaux références  
 
