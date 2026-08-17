@@ -6,7 +6,8 @@ draft: false
 
 Cet article contient deux concepts d'application des principes de la sculpture qui explorent l'idée de recherche d'un équilibre entre la nature et l'être humain; placant en interaction des éléments organiques et d'autres technologiques soumis à l'influence des énergies naturelles du vent et de la gravité.  
 
-Il s'agît d'esquisses en forme de maquette dont l'objectif principal est d'explorer différents principes d'ingénierie sans toutefois explorer la matérialité symbolique de la future sculpture. L'oeuvre finale intégrera l
+Il s'agît d'esquisses en forme de maquette dont l'objectif principal est d'explorer différents principes d'ingénierie offrant le potentiel d'intégration de deux des conctraintes tecniques de la sculpture (cinétique et autonomie énergétique) sans toutefois intégrer la matérialité propre de la sculpture finale composée principalement d'éléments recyclés. 
+
 
 ### Concept 1 - Mobile éolien
 
