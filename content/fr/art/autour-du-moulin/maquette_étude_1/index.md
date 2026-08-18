@@ -18,6 +18,12 @@ Il s'agît d'esquisses en forme de maquette dont l'objectif principal est d'expl
 {{< peertube id="w/jNRwtJserjwwzU4StK3kvu" full="true" >}}
 
 ### Concept 2 - Métronom éolien
+![Concept 2](image613.jpg)  
+
+![Concept 2 details](image612.jpg)   
+
+{{< peertube id="w/w/qdbC26TDUR9ZomyUZA1X72" full="true" >}}
+{{< peertube id="w/w/5gcDpaiSAcJXESZsfckkA8" full="true" >}}  
 
 {{< peertube id="w/w/hnnHguvcLzmLMKYVB6yuwJ" full="true" >}}
 
