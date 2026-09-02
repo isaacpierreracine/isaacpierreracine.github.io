@@ -22,12 +22,14 @@ Il s'agît d'esquisses en forme de maquette dont l'objectif principal est d'expl
 
 ### Concept 1 - version 3 -Mobile éolien
 
-![Concept 1](image610.jpg)![Concept 1 - détail 1](image607.jpg)  
-
-![Concept 1 - Version 2](image615.jpg)  
-![Concept 1 - version 2 -détail](image614.jpg)  
+![Concept 1 v3](image610.jpg)![Concept 1 v3 -détail 1](image607.jpg)  
 
 {{< peertube id="w/jNRwtJserjwwzU4StK3kvu" full="true" >}}
+
+![Concept 1 v3](image615.jpg)  
+![Concept 1 v3-détail](image614.jpg)  
+
+{{< peertube id="w/eokMWVMiW3yUku6nxcoDeg" full="true" >}}
 
 ### Concept 2 - Spirale
 ![Concept 2](image621.jpg)  
