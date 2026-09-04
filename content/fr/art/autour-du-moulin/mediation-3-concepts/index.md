@@ -2,6 +2,7 @@
 title: "Médiation 3: concepts"
 date: 2026-09-01
 draft: false
+image: image-m2.jpg
 ---
 
 Cette troisième et dernière session de médiation donne lieu à une présentation de concepts pouvant être appliqués aux principes de la sculpture.  

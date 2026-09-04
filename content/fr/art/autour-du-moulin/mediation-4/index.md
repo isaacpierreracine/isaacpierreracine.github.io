@@ -2,6 +2,7 @@
 title: "Médiation 4: OPEN STUDIO"
 date: 2026-08-24
 draft: false
+image: image2001.jpg
 ---
 
 Pour cette dernière séance de médiation je fais équipe avec ma collègue Sarah Brown qui participera au design et à la tenue de l'évènement dans l'objectif non seulement de présenter le résultat de mon travail de recherche, les maquettes produites et aussi de récolleter les réactions de la communauté locale face au projet de sculpture proposée. Cette dimension est três importante en ce qu'elle permettra d'évaluer l'acceptation sociale du projet et de contriuer à convaincre les instances municipales à soutenir son financement. 

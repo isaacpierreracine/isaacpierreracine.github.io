@@ -2,6 +2,7 @@
 title: "Étude 1 - vent et gravité"
 date: 2026-08-09
 draft: false
+image: image622.jpg 
 ---
 
 Cet article contient deux concepts d'application des principes de la sculpture qui explorent l'idée de recherche d'un équilibre entre la nature et l'être humain; placant en interaction des éléments organiques et d'autres technologiques soumis à l'influence des énergies naturelles du vent et de la gravité.  

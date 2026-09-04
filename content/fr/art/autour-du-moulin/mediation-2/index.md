@@ -2,6 +2,7 @@
 title: "Médiation 2"
 date: 2026-07-12
 draft: false
+image: image138.jpg
 ---
 
 #### Deuxième séance de médiation
