@@ -894,3 +894,9 @@ body > #dark-mode-toggle {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+// 24. Liens utiles — active tag button readable in light mode
+[data-scheme="light"] .ref-tag.active {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
