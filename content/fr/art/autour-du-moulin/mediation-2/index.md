@@ -7,7 +7,7 @@ image: image138.jpg
 
 #### Deuxième séance de médiation
 
-Cette séance de médiation aura lieu en présence de certains membres des comité Art Public et "200 ème". Pour cette occasion je présente la 2 éme phase du travail de recherche et d'exploration et j'introduis mes premières esquisses de l'éventuelle sculpture.  
+Cette séance de médiation aura lieu en présence de certains membres des comité "Art Public" et "200 ème". Pour cette occasion je présente la 2ème phase de mon travail de recherche et d'exploration et j'introduis mes premières esquisses de l'éventuelle sculpture.  
 
 Dans un premier temps je rapellerai les caractéristiques fondamentales du projet correspondant aux contraintes me servant de guide pour sa réalisation:
 

@@ -2,7 +2,7 @@
 title: "Résidences d'artistes en manufacture et industrie"
 date: 2026-06-27
 draft: false
-tags: []
+tags: [Art]
 ---
 
 # Résidences d'artistes en manufacture et industrie
