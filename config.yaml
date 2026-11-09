@@ -70,18 +70,18 @@ languages:
         - name: Art
           url: /fr/art/
           weight: 2
-        - name: Archive
-          url: /fr/archives/
+        - name: Cinéma
+          url: /fr/cinema/
           weight: 3
         - name: Liens utiles
           url: /fr/references/
           weight: 4
+        - name: Archive
+          url: /fr/archives/
+          weight: 5
         - name: À propos
           url: /fr/about/
           weight: 6
-        - name: Cinéma
-          url: /fr/cinema/
-          weight: 5
 
   en:
     languageName: "English"
@@ -100,14 +100,14 @@ languages:
         - name: Art
           url: /en/art/
           weight: 2
-        - name: Archive
-          url: /en/archives/
+        - name: Cinema
+          url: /en/cinema/
           weight: 3
         - name: Useful links
           url: /en/references/
           weight: 4
-        - name: Cinema
-          url: /en/cinema/
+        - name: Archive
+          url: /en/archives/
           weight: 5
         - name: About
           url: /en/about/
@@ -130,14 +130,14 @@ languages:
         - name: Arte
           url: /es/art/
           weight: 2
-        - name: Archivo
-          url: /es/archives/
+        - name: Cine
+          url: /es/cinema/
           weight: 3
         - name: Enlaces utiles
           url: /es/references/
           weight: 4
-        - name: Cine
-          url: /es/cinema/
+        - name: Archivo
+          url: /es/archives/
           weight: 5
         - name: Acerca de
           url: /es/about/
